@@ -5,20 +5,20 @@
   <title>TEST</title>
 </head>
 <body>
-  <h1 class="jdmeiheifan">可能有下雨就乾淨了</h1>
+  <h1 class="LinGothi">曾經有雜誌對全球多個國家形像進行評比打分，因為以色列由於地處中東又與周圍國家衝突不斷，大家一直本能地將其等同於伊拉克、巴勒斯坦等阿拉伯國家。其實以色列作為猶太國家，自成立起就有著猶太人的一些特點，特別是科技成果顯著。</h1>
 </body>
 <script type="text/javascript" src="http://www.youziku.com/UserDownFile/jquery.min.js"></script>
 <script type="text/javascript" src="http://www.youziku.com/UserDownFile/jquery.md5.js"></script>
 <script type="text/javascript"> 
-    function youziku19647() {
-        var resultStr = $(".jdmeiheifan").text();
+    function youziku46248() {
+        var resultStr = $(".LinGothi").text();
         var md5 = "";
         resultStr = Trim(resultStr);
         resultStr = SelectWord(resultStr);
-        md5 = $.md5("686a2ef7f7094180b900015e84fb4017"+"jdmeiheifan" + resultStr);
-        $.getJSON("http://www.youziku.com/webfont/CSSPOST?jsoncallback=?", { "id": md5, "guid": "686a2ef7f7094180b900015e84fb4017", "type": "5" }, function (json) {
+        md5 = $.md5("0d8cd6fd3b66482ba4ccd567c3893d04"+"LinGothi" + resultStr);
+        $.getJSON("http://www.youziku.com/webfont/CSSPOST?jsoncallback=?", { "id": md5, "guid": "0d8cd6fd3b66482ba4ccd567c3893d04", "type": "5" }, function (json) {
             if (json.result == 0) {/*alert("需要生成");*/
-                $.post("http://www.youziku.com/webfont/PostCorsCreateFont", { "name": "jdmeiheifan", "gid": "686a2ef7f7094180b900015e84fb4017", "type": "5", "text": resultStr }, function (json) {
+                $.post("http://www.youziku.com/webfont/PostCorsCreateFont", { "name": "LinGothi", "gid": "0d8cd6fd3b66482ba4ccd567c3893d04", "type": "5", "text": resultStr }, function (json) {
                 if (json == "0") { /*alert("参数不对");*/
                 } else if (json == "2") {/*alert("超过每日生成字体数的上限");*/
                 } else if (json == "3") { /*alert("当前正在生成请稍后");*/
@@ -27,7 +27,7 @@
             });
             }
             else {/*alert("下载css文件");*/
-                loadExtentFile("http://www.youziku.com/webfont/css?id=" + md5 + "&guid=" + "686a2ef7f7094180b900015e84fb4017" + "&type=5");
+                loadExtentFile("http://www.youziku.com/webfont/css?id=" + md5 + "&guid=" + "0d8cd6fd3b66482ba4ccd567c3893d04" + "&type=5");
             }
         });
     }
@@ -35,8 +35,8 @@
     if (window.location.href.toString().substring(0, 7) == "file://") {
             alert("你当前是通过双击打开html文件，进行本地测试的，这样看不到字体效果，一定要通过本地建立的虚拟网站或发布到外网进行测试。详见有字库的使用说明。");
         }else{
-        youziku19647();
+        youziku46248();
         }
     })()
-</script> 
+</script>
 </html>
