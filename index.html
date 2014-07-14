@@ -5,7 +5,7 @@
 function showResponse(response) {
     var responseString = JSON.stringify(response, '', 2);
     // document.getElementById('response').innerHTML += responseString;
-    console.log(responseString.pageInfo.totalResults);
+    console.log(responseString.nextPageToken);
 }
 function onClientLoad() {
     gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
