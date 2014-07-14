@@ -1,10 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>TEST</title>
-</head>
-<body>
-    
-</body>
+<!doctype html>
+<html>
+    <head>
+<script src="http://connect.soundcloud.com/sdk.js"></script>
+<script>
+        SC.initialize({
+            client_id: 'YOUR_CLIENT_ID'
+        });
+
+        $(document).ready(function() {
+            SC.get('/tracks
+        ', {
+                genres: '
+        radio '
+            }, function(tracks) {
+                $(tracks).each(function(index, track) {
+                    $('
+        # results ').append($(' < li > < /li>').html(track.title + ' - ' + track.genre));
+                });
+            });
+        });
+</script >
+    </head>
+    <body>
+        <ul id="results">
+            
+        </ul>
+    </body>
 </html>
