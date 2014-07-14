@@ -17,7 +17,8 @@ function onYouTubeApiLoad() {
 
 function search() {
     var request = gapi.client.youtube.search.list({
-        part: 'radiohead',
+        part: 'snippet',
+        q: 'radiohead',
     });
     request.execute(onSearchResponse);
 }
