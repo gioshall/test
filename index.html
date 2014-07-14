@@ -4,7 +4,7 @@
 <script>
 function showResponse(response) {
     var responseString = JSON.stringify(response, '', 2);
-    document.getElementById('response').innerHTML += responseString;
+    // document.getElementById('response').innerHTML += responseString;
 }
 function onClientLoad() {
     gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
@@ -25,11 +25,11 @@ function search() {
 function onSearchResponse(response) {
     showResponse(response);
 }
-console.log(items.id.videoId);
+console.log(response);
 </script>
         <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
     </head>
     <body>
-        <pre id="response"></pre>
+        <!-- <pre id="response"></pre> -->
     </body>
 </html>
