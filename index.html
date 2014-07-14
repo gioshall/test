@@ -2,29 +2,12 @@
 <html>
     <head>
 <script>
-function showResponse(response) {
-    var responseString = JSON.stringify(response, '', 2);
-    // document.getElementById('response').innerHTML += responseString;
-    console.log(responseString);
-}
-function onClientLoad() {
-    gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
-}
-function onYouTubeApiLoad() {
-    gapi.client.setApiKey('AIzaSyCR5In4DZaTP6IEZQ0r1JceuvluJRzQNLE');
-
-    search();
-}
-
-function search() {
-    var request = gapi.client.youtube.search.list({
-        part: 'snippet',
-        q: 'radiohead',
-    });
-    request.execute(onSearchResponse);
-}
-function onSearchResponse(response) {
-    showResponse(response);
+function searchByKeyword() {
+  var results = YouTube.Search.list('id,snippet', {q: 'dogs', maxResults: 25});
+  for(var i in results.items) {
+    var item = results.items[i];
+    console.log('[%s] Title: %s', item.id.videoId, item.snippet.title);
+  }
 }
 
 </script>
