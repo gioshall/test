@@ -3,7 +3,7 @@
     <head>
 <script>
 function showResponse(response) {
-    var responseString = JSON.stringify(response, '', 2);
+    var responseString = JSON.stringify(response, 'nextPageToken', 2);
     // document.getElementById('response').innerHTML += responseString;
     console.log(responseString);
 }
