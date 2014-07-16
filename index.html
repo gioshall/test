@@ -4,7 +4,7 @@
 <script>
 function showResponse(response) {
     var responseString = JSON.stringify(response, '', 2);
-    // document.getElementById('response').innerHTML += responseString;
+    document.getElementById('embed').setAttribute("src","//www.youtube.com/embed/" + response.items[0].id.videoId );
     console.log(response.items[0].id.videoId);
 }
 function onClientLoad() {
@@ -29,8 +29,14 @@ function onSearchResponse(response) {
 
 </script>
         <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
+<style>
+    #embed {
+        width: 560px;
+        height: 315px;
+    }
+</style>    
     </head>
     <body>
-        <!-- <pre id="response"></pre> -->
+        <iframe id="embed" allowfullscreen></iframe>
     </body>
 </html>
