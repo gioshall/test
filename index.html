@@ -25,7 +25,7 @@ function onSearchResponse(response) {
 function showResponse(response) {
     var responseString = JSON.stringify(response, '', 2);
     console.log(response.items.length);
-    for(var i = 0; i < cresponse.items.length; i++) {
+    for(var i = 0; i < response.items.length; i++) {
         var ytResult = document.createElement('iframe');
         ytResult.setAttribute("src","//www.youtube.com/embed/" + response.items[0].id.videoId );
         document.getElementById('mylist').appendChild(ytResult);
