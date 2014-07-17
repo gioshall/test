@@ -14,6 +14,7 @@ function onYouTubeApiLoad() {
 function search() {
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
+        maxResults: 20,
         q: 'radiohead glastonbury',
     });
     request.execute(onSearchResponse);
@@ -41,6 +42,7 @@ function showResponse(response) {
         width: 560px;
         height: 315px;
         border: 0;
+        margin: 5px;
         display: block;
     }
 </style>    
