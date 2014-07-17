@@ -2,11 +2,6 @@
 <html>
     <head>
 <script>
-function showResponse(response) {
-    var responseString = JSON.stringify(response, '', 2);
-    document.getElementById('embed').setAttribute("src","//www.youtube.com/embed/" + response.items[0].id.videoId );
-    console.log(response.items.length);
-}
 function onClientLoad() {
     gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
 }
@@ -27,6 +22,18 @@ function onSearchResponse(response) {
     showResponse(response);
 }
 
+function showResponse(response) {
+    var responseString = JSON.stringify(response, '', 2);
+    console.log(response.items.length);
+    for(var i = 0; i < cresponse.items.length; i++) {
+        var ytResult = document.createElement('iframe');
+        ytResult.setAttribute("src","//www.youtube.com/embed/" + response.items[0].id.videoId );
+        document.getElementById('mylist').appendChild(ytResult);
+    };
+    //document.getElementById('embed').setAttribute("src","//www.youtube.com/embed/" + response.items[0].id.videoId );
+    
+}
+
 </script>
         <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
 <style>
@@ -38,6 +45,6 @@ function onSearchResponse(response) {
 </style>    
     </head>
     <body>
-        <iframe id="embed" allowfullscreen></iframe>
+        <div id="mylist"></div>
     </body>
 </html>
