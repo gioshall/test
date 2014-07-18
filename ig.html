@@ -4,21 +4,17 @@
 	<meta charset="UTF-8">
 	<title>IG</title>
 </head>
-<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-<script src="js/spectragram.min.js"></script>
-<script>
-jQuery.fn.spectragram.accessData = {
-    accessToken: '129158.f59def8.52b35b5270064c33a385c0b0ebf0511e',
-    clientID: '929ab788d83d4ef8ba9fe8c62bac4996'
-};
-$('div').spectragram({
-    query: '',
-    max: 14,
-    size: 'big',
-    wrapEachWith: '<p></p>'
-});
+<!-- <script src="http://code.jquery.com/jquery-1.10.2.js"></script> -->
+<script type="text/javascript" src="js/instafeed.min.js"></script>
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'tagged',
+        tagName: 'awesome',
+        clientId: '929ab788d83d4ef8ba9fe8c62bac4996'
+    });
+    feed.run();
 </script>
 <body>
-	<div></div>
+	
 </body>
 </html>
