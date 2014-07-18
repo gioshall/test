@@ -6,11 +6,23 @@
 </head>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
-$.get( "https://api.instagram.com/v1/users/1574083/?access_token=129158.f59def8.52b35b5270064c33a385c0b0ebf0511e", function( data ) {
-  alert( "Data Loaded: " + data );
-});
+function pullInstragram() {
+        $.ajax({
+            type: "GET",
+            dataType: "jsonp",
+            cache: false,
+            url: "https://api.instagram.com/v1/users/1574083/media/recent/?access_token=1574083.f59def8.fae94a43db9f472ca9e235b9468fb3ea",
+            success: function(data) {
+                $(".instagram ul").html('');
+                for (var i = 0; i < 10; i  ) {
+                    $(".instagram ul").append("<li><a href='#'><img src='"   data.data[i].images.low_resolution.url   "' /></a></li>");
+                }
+            }
+        });
 </script>
 <body>
-<div class="result"></div>
+<div class="instagram">
+	<ul></ul>
+</div>
 </body>
 </html>
