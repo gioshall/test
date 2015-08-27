@@ -4,19 +4,30 @@
 	<meta charset="UTF-8">
 	<title>IG</title>
 </head>
-<!-- <script src="http://code.jquery.com/jquery-1.10.2.js"></script> -->
+<body>
+<form>
+    <input type="text" id="formValueId" name="valueId"/>
+    <input type="button" id="myButton" value="btn"/>
+</form>
+	<div id="instafeed"></div> 
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script type="text/javascript" src="js/instafeed.min.js"></script>
 <script type="text/javascript">
-    var feed = new Instafeed({
+$(document).ready(function() {
+    $('#myButton').click(function() {
+      //console.log($('#formValueId').val());
+      var feed = new Instafeed({
         get: 'tagged',
-        tagName: 'snap',
+        tagName: $('#formValueId').val(),
         clientId: '929ab788d83d4ef8ba9fe8c62bac4996',
         resolution: 'low_resolution'
+      });
+      feed.run();
     });
-    feed.run();
-    console.log(feed);
+});
+
+    
+    //console.log(feed);
 </script>
-<body>
-	<div id="instafeed"></div> 
 </body>
 </html>
