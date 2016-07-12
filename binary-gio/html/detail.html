@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>外汇 - 美金 / 日圓</title>
+  <link href='https://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body>
+  <header>
+    <div>外汇 - 美金 / 日圓</div>
+  </header>
+  <div class="second-bar">
+    <div class="category-item">全部</div>
+    <div class="category-item-select">外汇</div>
+    <div class="category-item">指数</div>
+    <div class="category-item">原产品</div>
+    <div onclick="timePickerOnClick()"><img width="20px" height="20px" src="../icons/icon-clock@3x.png" /></div>
+    <div style="display: flex; align-items: center">
+      <span style="margin-right: 4px">組</span>
+      <label class="switch">
+        <input type="checkbox">
+        <div class="slider round"></div>
+      </label>
+    </div>
+  </div>
+
+  <section class="card-list">
+    <div class="detail-card">
+      <div class="card-content">
+        <div class="detail-card-content-item-wrapper">
+          <div class="detail-card-content-item">
+            <div>美金/日圓</div>
+            <div style="margin-left: 8px">USD/JPY</div>
+          </div>
+          <div class="detail-card-content-item">
+            <div>$300</div>
+            <div style="margin-left: 15px">
+            <img width="12px" height="7px" src="../icons/icon-arrow-down.svg" />
+            </div>
+          </div>
+        </div>
+        <div class="detail-card-content-item-wrapper">
+          <div class="detail-card-content-item">
+            <div class="status-item status-item-up">涨</div>
+            <div>&nbsp;107.103</div>
+          </div>
+          <div class="price-tag-wrapper">
+            <div>107.</div>
+            <div class="price-tag-decimal">109</div>
+          </div>
+          <div class="icon-winlose">赢</div>
+        </div>
+      </div>
+    </div>
+    <div class="detail-card-expand">
+      <div class="card-content">
+        <div class="detail-card-content-item-wrapper">
+          <div class="detail-card-content-item">
+            <div>美金/日圓</div>
+            <div style="margin-left: 8px">USD/JPY</div>
+          </div>
+          <div class="detail-card-content-item">
+            <div>-$200</div>
+            <div style="margin-left: 15px"><img width="12px" height="7px" src="../icons/icon-arrow-up.svg" /></div>
+          </div>
+        </div>
+        <div class="detail-card-content-item-wrapper">
+          <div class="detail-card-content-item">
+            <div class="status-item status-item-even">双</div>
+            <div>&nbsp;107.101</div>
+          </div>
+          <div class="price-tag-wrapper">
+            <div>107.</div>
+            <div class="price-tag-decimal">103</div>
+          </div>
+          <div class="icon-winlose icon-lose">输</div>
+        </div>
+      </div>
+      <div class="detail-card-footer">
+        <div class="detail-card-footer-item">
+          <div style="margin-bottom: 4px">执行时间</div>
+          <div class="card-footer-item-num">21/01/2016</div>
+          <div class="card-footer-item-num">10:42:21</div>
+        </div>
+        <div class="detail-card-footer-item">
+          <div style="margin-bottom: 4px">交易时间</div>
+          <div class="card-footer-item-num">60s</div>
+        </div>
+        <div class="detail-card-footer-item">
+          <div style="margin-bottom: 4px">结算时间</div>
+          <div class="card-footer-item-num">-</div>
+        </div>
+        <div class="detail-card-footer-item">
+          <div style="margin-bottom: 4px">投资额</div>
+          <div class="card-footer-item-num">$200</div>
+        </div>
+      </div>
+    </div>
+    <div class="detail-card">
+      <div class="card-content">
+        <div class="detail-card-content-item-wrapper">
+          <div class="detail-card-content-item">
+            <div>美金/日圓</div>
+            <div style="margin-left: 8px">USD/JPY</div>
+          </div>
+          <div class="detail-card-content-item">
+            <div>$300</div>
+            <div style="margin-left: 15px"><img width="12px" height="7px" src="../icons/icon-arrow-down.svg" /></div>
+          </div>
+        </div>
+        <div class="detail-card-content-item-wrapper">
+          <div class="detail-card-content-item">
+            <div class="status-item status-item-up">涨</div>
+            <div>&nbsp;107.103</div>
+          </div>
+          <div class="price-tag-wrapper">
+            <div>107.</div>
+            <div class="price-tag-decimal">103</div>
+          </div>
+          <div class="icon-winlose icon-even">和</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="display:none">
+    <div class="footer-item-wrapper">
+      <div class="footer-item">
+        <div>信用余额（始）</div>
+        <div class="card-footer-item-num">100,000.00</div>
+      </div>
+      <div class="footer-item">
+        <div>总盈亏</div>
+        <div class="card-footer-item-num">3,770.00</div>
+      </div>
+      <div class="footer-item">
+        <div>返水</div>
+        <div class="card-footer-item-num">321.00</div>
+      </div>
+      <div class="footer-item">
+        <div>信用余额</div>
+        <div class="card-footer-item-num">103,091.00</div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="time-picker-overlay" id="time-picker">
+    <div class="time-picker-wrapper">
+      <div class="time-picker-item header">交易时间</div>
+      <div class="time-picker-item">
+        <input type="checkbox" id="checkbox-1"/>
+        <label for="checkbox-1">今日</label>
+      </div>
+      <div class="time-picker-item">
+        <input type="checkbox" id="checkbox-2"/>
+        <label for="checkbox-2">昨日</label>
+      </div>
+      <div class="time-picker-item">
+        <input type="checkbox" id="checkbox-3"/>
+        <label for="checkbox-3">这周</label>
+      </div>
+      <div class="time-picker-item">
+        <input type="checkbox" id="checkbox-4"/>
+        <label for="checkbox-4">上周</label>
+      </div>
+      <div class="time-picker-item">
+        <input type="checkbox" id="checkbox-5"/>
+        <label for="checkbox-5">此月</label>
+      </div>
+      <div class="time-picker-item">
+        <input type="checkbox" id="checkbox-6"/>
+        <label for="checkbox-6">上个月</label>
+      </div>
+      <div class="time-picker-item">
+        <input type="checkbox" id="checkbox-7"/>
+        <label for="checkbox-7">最近三个月</label>
+      </div>
+      <div class="time-picker-item">从 <input type="date" class="date"/> 到 <input type="date" class="date"/></div>
+      <div class="time-picker-footer">
+        <div class="btn small cancel" onclick="hideTimePicker()">取消</div>
+        <div class="btn small" onclick="hideTimePicker()">确认</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function timePickerOnClick() {
+      document.getElementById('time-picker').style.display = 'block';
+    }
+    function hideTimePicker() {
+      document.getElementById('time-picker').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

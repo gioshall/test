@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>交易纪录</title>
+  <link href='https://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body>
+  <header>
+    <div>
+      交易纪录
+    </div>
+  </header>
+  <div class="second-bar">
+    <div class="category-item-select">全部</div>
+    <div class="category-item">外汇</div>
+    <div class="category-item">指数</div>
+    <div class="category-item">原产品</div>
+    <div onclick="timePickerOnClick()"><img width="20px" height="20px" src="../icons/icon-clock@3x.png" /></div>
+    <div style="display: flex; align-items: center">
+      <span style="margin-right: 4px">組</span>
+      <label class="switch">
+        <input type="checkbox" checked>
+        <div class="slider round"></div>
+      </label>
+    </div>
+  </div>
+
+  <section class="card-list">
+    <div class="card" onclick="gotoDetail()">
+      <div class="card-content">
+        <div class="card-content-item">
+          <div class="card-content-item-1">美金/日圓</div>
+          <div class="card-content-item-2">USD/JPY</div>
+          <div class="card-content-item-3">快速交易</div>
+        </div>
+        <div class="card-content-item">
+          <div class="card-content-item-1">
+            <div class="status-item status-item-up">涨</div>
+            <div>&nbsp;300</div>
+          </div>
+          <div class="card-content-item-2">
+            <div class="status-item">跌</div>
+          </div>
+          <div class="card-content-item-3">60%</div>
+        </div>
+        <div class="card-content-item">
+          <div class="card-content-item-1">
+            <div class="status-item">单</div>
+          </div>
+          <div class="card-content-item-2">
+            <div class="status-item status-item-even">双</div>
+            <div>&nbsp;200</div>
+          </div>
+          <div class="card-content-item-3">40%</div>
+        </div>
+        <div class="card-content-item">
+          <div class="card-content-item-1">
+            <div class="status-item">大</div>
+          </div>
+          <div class="card-content-item-2">
+            <div class="status-item">小</div>
+          </div>
+          <div class="card-content-item-3">-%</div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="card-footer-item">
+          <div>总下注单数:</div>
+          <div class="card-footer-item-num">&nbsp;2</div>
+        </div>
+        <div class="card-footer-item">
+          <div>总投资:</div>
+          <div class="card-footer-item-num">&nbsp;500.00</div>
+        </div>
+        <div class="card-footer-item">
+          <div>盈亏:</div>
+          <div class="card-footer-item-num">&nbsp;500.00</div>
+        </div>
+      </div>
+      <img src="../icons/icon-arrow-next.svg">
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <div class="card-content-item">
+          <div class="card-content-item-1">欧元/日圓</div>
+          <div class="card-content-item-2">EUR/JPY</div>
+          <div class="card-content-item-3">快速交易</div>
+        </div>
+        <div class="card-content-item">
+          <div class="card-content-item-1">
+            <div class="status-item">涨</div>
+          </div>
+          <div class="card-content-item-2">
+            <div class="status-item status-item-down">跌</div>
+            <div>&nbsp;400</div>
+          </div>
+          <div class="card-content-item-3">60%</div>
+        </div>
+        <div class="card-content-item">
+          <div class="card-content-item-1">
+            <div class="status-item">单</div>
+          </div>
+          <div class="card-content-item-2">
+            <div class="status-item">双</div>
+          </div>
+          <div class="card-content-item-3">40%</div>
+        </div>
+        <div class="card-content-item">
+          <div class="card-content-item-1">
+            <div class="status-item status-item-large">大</div>
+            <div>&nbsp;100</div>
+          </div>
+          <div class="card-content-item-2">
+            <div class="status-item status-item-small">小</div>
+            <div>&nbsp;500</div>
+          </div>
+          <div class="card-content-item-3">-%</div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="card-footer-item">
+          <div>总下注单数:</div>
+          <div class="card-footer-item-num">&nbsp;3</div>
+        </div>
+        <div class="card-footer-item">
+          <div>总投资:</div>
+          <div class="card-footer-item-num">&nbsp;1000.00</div>
+        </div>
+        <div class="card-footer-item">
+          <div>盈亏:</div>
+          <div class="card-footer-item-num">&nbsp;1000.00</div>
+        </div>
+      </div>
+      <img src="../icons/icon-arrow-next.svg">
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <div class="card-content-item">
+          <div class="card-content-item-1">欧元/加币</div>
+          <div class="card-content-item-2">EUR/CAD</div>
+          <div class="card-content-item-3">快速交易</div>
+        </div>
+        <div class="card-content-item">
+          <div class="card-content-item-1">
+            <div class="status-item">涨</div>
+          </div>
+          <div class="card-content-item-2">
+            <div class="status-item status-item-down">跌</div>
+            <div>&nbsp;100</div>
+          </div>
+          <div class="card-content-item-3">60%</div>
+        </div>
+        <div class="card-content-item">
+          <div class="card-content-item-1">
+            <div class="status-item">单</div>
+          </div>
+          <div class="card-content-item-2">
+            <div class="status-item">双</div>
+          </div>
+          <div class="card-content-item-3">40%</div>
+        </div>
+        <div class="card-content-item">
+          <div class="card-content-item-1">
+            <div class="status-item">大</div>
+          </div>
+          <div class="card-content-item-2">
+            <div class="status-item">小</div>
+          </div>
+          <div class="card-content-item-3">-%</div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="card-footer-item">
+          <div>总下注单数:</div>
+          <div class="card-footer-item-num">&nbsp;2</div>
+        </div>
+        <div class="card-footer-item">
+          <div>总投资:</div>
+          <div class="card-footer-item-num">&nbsp;500.00</div>
+        </div>
+        <div class="card-footer-item">
+          <div>盈亏:</div>
+          <div class="card-footer-item-num">&nbsp;500.00</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-item-wrapper">
+      <div class="footer-item">
+        <div>信用余额（始）</div>
+        <div class="card-footer-item-num">100,000.00</div>
+      </div>
+      <div class="footer-item">
+        <div>总盈亏</div>
+        <div class="card-footer-item-num">3,770.00</div>
+      </div>
+      <div class="footer-item">
+        <div>返水</div>
+        <div class="card-footer-item-num">321.00</div>
+      </div>
+      <div class="footer-item">
+        <div>信用余额</div>
+        <div class="card-footer-item-num">103,091.00</div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="time-picker-overlay" id="time-picker">
+    <div class="time-picker-wrapper">
+      <div class="time-picker-item header">交易时间</div>
+      <div class="time-picker-item">
+        <input type="checkbox" id="checkbox-1"/>
+        <label for="checkbox-1">今日</label>
+      </div>
+      <div class="time-picker-item">
+        <input type="checkbox" id="checkbox-2"/>
+        <label for="checkbox-2">昨日</label>
+      </div>
+      <div class="time-picker-item">
+        <input type="checkbox" id="checkbox-3"/>
+        <label for="checkbox-3">这周</label>
+      </div>
+      <div class="time-picker-item">
+        <input type="checkbox" id="checkbox-4"/>
+        <label for="checkbox-4">上周</label>
+      </div>
+      <div class="time-picker-item">
+        <input type="checkbox" id="checkbox-5"/>
+        <label for="checkbox-5">此月</label>
+      </div>
+      <div class="time-picker-item">
+        <input type="checkbox" id="checkbox-6"/>
+        <label for="checkbox-6">上个月</label>
+      </div>
+      <div class="time-picker-item">
+        <input type="checkbox" id="checkbox-7"/>
+        <label for="checkbox-7">最近三个月</label>
+      </div>
+      <div class="time-picker-item">从 <input type="date" class="date"/> 到 <input type="date" class="date"/></div>
+      <div class="time-picker-footer">
+        <div class="btn small cancel" onclick="hideTimePicker()">取消</div>
+        <div class="btn small" onclick="hideTimePicker()">确认</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function timePickerOnClick() {
+      document.getElementById('time-picker').style.display = 'block';
+    }
+    function hideTimePicker() {
+      document.getElementById('time-picker').style.display = 'none';
+    }
+    function gotoDetail() {
+      console.log('go to detail');
+      window.location.href = 'detail.html';
+    }
+  </script>
+</body>
+</html>
