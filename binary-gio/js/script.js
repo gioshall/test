@@ -13,7 +13,7 @@ function gotoDetail() {
 
 $('#nav-icon').click(function(){
 	$(this).toggleClass('open');
-	$('body, .wrapper, .side-menu').toggleClass('active');
+	$('.wrapper, .side-menu').toggleClass('active');
 });
 
 $('input[type="checkbox"]').on('change', function() {
