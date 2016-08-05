@@ -13,12 +13,14 @@ function gotoDetail() {
 
 $('#nav-icon').click(function(){
 	$(this).toggleClass('open');
-	$('body').toggleClass('active');
+	$('body').toggleClass('active').bind('touchmove', function(e) {
+		e.preventDefault();
+	});
 });
 
-$('body.active').bind('touchmove', function(e) {
-	e.preventDefault();
-});
+// $('body.active').bind('touchmove', function(e) {
+// 	e.preventDefault();
+// });
 
 $('input[type="checkbox"]').on('change', function() {
 	$('input[type="checkbox"]').not(this).prop('checked', false);
