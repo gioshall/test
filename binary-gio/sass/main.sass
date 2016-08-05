@@ -4,6 +4,7 @@
 body
 	width: 100%
 	height: 100%
+	position: relative
 	&.launcher
 		+bg(launch-bg,svg)
 		background-size: cover
@@ -52,19 +53,36 @@ body
 					background-position: 3px center
 					text-indent: 35px
 					-webkit-appearance: none
-				input[name=id]
+				input[name=username]
 					+bg(icon_profile,svg)
-				input[name=pw]
+				input[name=pass]
 					+bg(icon_password,png)
+				input[name=repass]
+					+bg(icon-shield,svg)
+				input[name=phone]
+					+bg(icon-phone,png)
+				.promote
+					line-height: 2
+				h3
+					text-align: center
+					font-size: 24px
+				h2
+					font-size: 21px
+					b
+						color: #000
+						font-weight: bold
+				p
+					padding-bottom: 20px
 			.remember
 				font-size: 13px
 				line-height: 35px
 				margin-bottom: 20px
 				input[type=checkbox]
-					margin-right: 5px	
+					margin-right: 5px
+
 header
 	height: 42px
-	background: linear-gradient(to bottom, #edc23e, #c8a43f)
+	+linear-gradient(#edc23e,#c8a43f)
 	color: #fff
 	text-align: center
 	position: fixed
@@ -73,6 +91,26 @@ header
 	right: 0
 	box-shadow: 0 1.5px 1px 0 rgba(0, 0, 0, 0.5)
 	z-index: 2
+	+transform(translateX(0))
+	+transition(0.2s)
+	transition-delay: 0.2s
+	&+section
+		+transform(translateX(0))
+		+transition(0.2s)
+		transition-delay: 0.2s
+		&.active:before
+			content: ''
+			position: fixed
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			background-color: rgba(0,0,0,0.3)
+			z-index: 10
+
+	&.active,
+	&+section.active
+		+transform(translateX(80%))
 	&:after
 		content: ''
 		display: inline-block
@@ -120,6 +158,12 @@ header
 	div
 		box-sizing: border-box
 		font-size: 13px
+.second-bar
+	background-color: #5e5e5e
+	color: #fff
+	&.buttons
+		div:last-child
+			margin-right: 123px
 
 .main-block
 	padding: 15px 30px
@@ -176,10 +220,71 @@ header
 .category-item-select 
 	padding: 6.5px
 	text-align: center
-	background-image: linear-gradient(to bottom, #edc23e, #c8a43f)
+	+linear-gradient(#edc23e,#c8a43f)
 	border: solid 1px #edc23e
 	color: #fff
 	+border-radius(5px)
+
+.p-list
+	margin-top: 92px
+
+.list-head,
+.list-content
+	text-indent: 15px
+	line-height: 30px
+	color: #5e5e5e
+	font-size: 13px
+	background-color: #e9e9e9
+	text-align: left
+	width: 100%
+	display: flex
+	justify-content: space-between
+	align-items: center
+	.list-item
+		font-size: 13px
+		color: #5e5e5e
+
+		&:nth-of-type(1)
+			width: 40%
+		&:nth-of-type(2)
+			width: calc(60% - 100px)
+		&:nth-of-type(3)
+			width: 100px
+		.icon-sopen,
+		.icon-sclose
+			display: inline-block
+			width: 12px
+			height: 12px
+			font-size: 0
+			background-size: 100%
+			&.icon-sopen
+				+bg(icon-sopen,svg)
+			&.icon-sclose
+				+bg(icon-sclose,svg)
+		.price-up,
+		.price-down
+			font-size: 15px
+			font-weight: bold
+			padding: 2px 3px
+			border-radius: 5px
+		.price-up
+			color: #f54828
+			border: 2px #f54828 solid
+		.price-down
+			color: #7ed321
+			border: 2px #7ed321 solid 
+
+.list-content
+	background-color: #fff
+	border-bottom: solid 1px #bebebe
+	.list-item
+		font-size: 15px
+		color: #555
+		line-height: 50px
+	&:nth-child(odd)
+		background-color: #efefef
+
+
 
 .card-list
 	margin-top: 107px
@@ -320,6 +425,7 @@ header
 		[type=checkbox]
 			display: none
 		[type=checkbox]:checked ~ label
+			color: #d8a301
 			&.toggle
 				&:after
 					margin-top: -25px
@@ -342,6 +448,84 @@ header
 		[type=checkbox]:checked ~ label ~ .content
 			height: auto
 			+transition(0.3s)
+
+.side-menu
+	width: 80%
+	height: 100%
+	left: 0
+	top: 0
+	position: fixed
+	z-index: 100	
+	overflow-y: auto
+	+transition(0.2s)
+	+transform(translateX(-100%))
+	transition-delay: 0.2s
+	&.active
+		box-shadow: 2px 0 8px rgba(0,0,0,0.5)
+		+transform(translateX(0%))
+	.main-block
+		top: 0
+		padding: 15px 15px
+		text-align: left
+		height: 150px
+	.menu
+		background-color: #FFF
+		height: calc(100% - 150px)
+		position: relative
+		z-index: 1
+		margin-top: 0
+		.menu-list
+			margin: 0
+			border: 0 #fff solid
+			ul
+				label
+					border-bottom: 0px solid #bebebe
+				.content
+					li
+						border-bottom: 0px solid #bebebe
+
+#nav-icon
+	width: 25px
+	height: 19px
+	position: absolute
+	left: 10px
+	top: 10px
+	cursor: pointer
+	+transform(rotate(0deg))
+	+transition(0.4s ease-in-out)
+	i
+		display: block
+		position: absolute
+		height: 3px
+		width: 100%
+		background-color: #fff
+		opacity: 1
+		left: 0
+		+border-radius(3px)
+		+transform(rotate(0deg))
+		+transition(0.2s ease-in-out)
+		&:nth-child(1)
+			top: 0
+		&:nth-child(2),
+		&:nth-child(3)
+			top: 8px
+		&:nth-child(4)
+			top: 16px
+	&.open
+		i
+			&:nth-child(1)
+				top: 8px
+				width: 0
+				left: 50%
+			&:nth-child(2)
+				+transform(rotate(45deg))
+			&:nth-child(3)
+				+transform(rotate(-45deg))
+			&:nth-child(4)
+				top: 8px
+				width: 0
+				left: 50%
+
 .pwd
 	padding: 15px
 	background-color: #eceef0
@@ -362,16 +546,95 @@ header
 			input
 				width: 95%
 				margin: auto
-				height: 35px
+				height: 30px
 				border: 0
 				text-indent: 5px
+				background-color: transparent
 				-webkit-appearance: none
-
 
 .detail-card
 	height: 93px
 	display: flex
+	&.simple
+		height: 55px
+		background-color: #FFF
+		&:nth-of-type(2)
+			margin-top: 40px
+		.detail-card-content-item-wrapper
+			@media screen and (max-width: 320px)
+				margin: 7px
+		.time,
+		.dollar
+			font-size: 12px
+			color: #9b9b9b
+			.game-type
+				font-weight: bold
+				line-height: 20px
+				font-size: 13px
+		.time
+			width: 60px
+		.dollar
+			width: 75px
+			font-size: 15px
+			white-space: nowrap
+			text-align: right	
+			&.win
+				color: #7ed321
+			&.lose
+				color: #f31611
+			@media screen and (max-width: 380px)
+				width: 65px
+				font-size: 14px
 
+
+		.cur
+			font-size: 12px
+			color: #555
+			font-weight: bold
+			text-align: center
+			width: 80px
+		.status-result
+			display: block
+		.status-item
+			display: inline-block
+			margin: 2px
+			height: 18px
+			width: 18px
+			line-height: 18px
+			font-weight: normal
+		.price-tag-wrapper
+			border: 0px #000 solid
+			width: 70px
+			@media screen and (max-width: 380px)
+				width: 55px
+			@media screen and (max-width: 320px)
+				width: 50px
+		.trading-price
+			height: 30px
+			line-height: 30px
+			padding: 0 10px
+			font-size: 15px
+			position: relative
+			&.c2
+				padding-bottom: 18px
+
+		.trading-price-decimal
+			border: 0px #000 solid
+			font-size: 17px
+			font-weight: bold
+			padding: 0
+		.org-price
+			font-size: 12px
+			color: #d8d8d8
+			display: block
+			width: 100%
+			position: absolute
+			left: 0
+			bottom: 0
+
+		.timer
+			margin-left: 0
+			background-position: center
 
 .detail-card-expand
 	height: 171.5px
@@ -439,8 +702,8 @@ header
 	border-color: #f54828
 
 .status-item-odd
-	color: #7ed321
-	border-color: #7ed321
+	color: #4a90e2
+	border-color: #4a90e2
 
 .status-item-even
 	color: #f89b36
@@ -460,7 +723,7 @@ header
 	display: flex
 	justify-content: center
 	align-items: center
-	background-image: linear-gradient(to bottom, #9b9b9b, #838383)
+	+linear-gradient(#9b9b9b,#838383)
 	color: #fff
 	font-size: 16px
 	+border-radius(3px)
@@ -486,6 +749,24 @@ header
 .trading-price-even
 	color: #f89b36
 
+.trading-price-odd
+	color: #4a90e2
+
+.trading-price-big
+	color: #9761c9
+
+.trading-price-small
+	color: #f6c33f
+
+.order-number
+	font-size: 10px
+	color: #bebebe
+	display: block
+	text-align: center
+	width: 100%
+	line-height: 16px
+	margin: 5px 0
+
 
 .timer,
 .icon-winlose
@@ -493,12 +774,13 @@ header
 	width: 34px
 	line-height: 34px
 	text-align: center
-	+bg(icon_green,svg)
+	+bg(icon_red,svg)
 	background-repeat: no-repeat
 	background-size: contain
+	background-position: center
 	color: #fff
 	&.icon-lose
-		+bg(icon_red,svg)
+		+bg(icon_green,svg)
 	&.time-is-up,
 	&.icon-even
 		+bg(icon_gray,svg)
@@ -527,7 +809,8 @@ footer
 		padding-bottom: 8px
 
 
-.time-picker-overlay
+.time-picker-overlay, 
+#bid-overlay
 	display: none
 	position: fixed
 	top: 0
@@ -555,7 +838,7 @@ footer
 		border-bottom: 1px solid #bebebe
 
 		&.header
-			background: linear-gradient(to bottom, #edc23e, #c8a43f)
+			+linear-gradient(#edc23e,#c8a43f)
 			color: #fff
 			border-bottom: none
 		.date
@@ -590,25 +873,103 @@ footer
 		display: flex
 		justify-content: center
 		align-items: center
+#bid-overlay
+	text-align: center
+	h3
+		font-size: 20px
+		line-height: 28px
+		color: #000
+		margin-bottom: 12px
+	.trade-index,
+	.trade-info
+		position: relative
+		width: 80%
+		margin: 20px auto
+		dl
+			display: inline-block
+			width: 30%
+			font-size: 0
+			margin: 0
+			padding: 0
+			text-align: center
+			dt
+				font-size: 12px
+				line-height: 17px
+				text-align: center
+			dd
+				font-size: 22px
+				line-height: 30px
+				color: #19232E
+				font-weight: bold
+				-webkit-margin-start: 0px
+	.trade-index
+		box-sizing: border-box
+		border: 1px #666 solid
+		text-align: left
+		+border-radius(4px)
+		dl
+			width: 48%
+			padding: 5px 0
+		#confirmOrderType
+			color: #fff
+			background-color: #666
+			dd
+				color: #fff
+	&.bid-odd
+		display: block
+		.trade-index
+			border: solid 1px #3770ba
+			#confirmOrderType
+				background-color: #4a90e2
+	&.bid-even
+		display: block
+		.trade-index
+			border: solid 1px #ce7929
+			#confirmOrderType
+				background-color: #f89b36
+	&.bid-big
+		display: block
+		.trade-index
+			border: solid 1px #8255ad
+			#confirmOrderType
+				background-color: #9761c9
+	&.bid-small
+		display: block
+		.trade-index
+			border: solid 1px #d5aa38
+			#confirmOrderType
+				background-color: #f6c33f
 
 .btn
 	text-align: center
-	background-image: linear-gradient(to bottom, #edc23e, #c8a43f)
+	+linear-gradient(#edc23e,#c8a43f)
 	box-shadow: inset 0 1px 1px 0 #ffffff
 	border: solid 1px #edc23e
 	color: #fff
 	font-size: 14px
 	line-height: 35px
 	margin: 10px auto 0
+	padding: 0
+	-webkit-appearance: none
+	display: block
+	width: 100%
 	+border-radius(5px)
 	&.cancel
 		background: #d8d8d8
 		box-shadow: inset 0 1px 1px 0 #ffffff
 		border: solid 1px #bebebe
 		color: #5e5e5e
+		&:focus
+			border: solid 1px #bebebe
+			background: #bebebe
 	&.small
 		width: 70px
 		margin: 0 8px
+	&:focus
+		box-shadow: inset 0 0 0 0 #ffffff
+		background: #c8a43f
+		border: solid 1px #c8a43f
+		outline: none
 
 
 .switch
@@ -627,7 +988,7 @@ footer
 	left: 0
 	right: 0
 	bottom: 0
-	background-color: #555
+	background-color: #ccc
 	-webkit-transition: .4s
 	transition: .4s
 	&:before
@@ -653,6 +1014,257 @@ input
 	&:checked + .slider:before
 		+transform(translateX(12px))
 	
+.qr-code
+	width: 280px
+	position: absolute
+	top: 20%
+	left: 50%
+	text-align: center
+	+transform(translateX(-50%))
+	img
+		width: 200px
+		height: 200px
+		display: block
+		margin: auto
+	.msg
+		font-size: 13px
+		line-height: 22px
+		color: #5e5e5e
+		margin-top: 50px
+
+.bottom-nav
+	height: 45px
+	width: 100%
+	left: 0
+	position: fixed
+	bottom: 0
+	font-size: 0
+	margin: 0
+	padding: 0
+	li
+		display: inline-block
+		height: 45px
+		width: calc(100% / 3)
+		background-color: #e9e9e9
+		margin: 0
+		padding: 0
+		background-size: auto 60%
+		background-position: center
+		
+		&.transfer
+			+bg(icon-trf,svg)
+		&.waiting
+			+bg(icon-waiting,svg)
+		&.completed
+			+bg(icon-completed,svg)
+		&.active
+			background-color: #edc23e
+			&.transfer
+				+bg(icon-trf-on,svg)
+			&.waiting
+				+bg(icon-waiting-on,svg)
+			&.completed
+				+bg(icon-completed-on,svg)
+.transaction
+	position: absolute
+	width: 100%
+	height: calc(100vh - 42px)
+	padding-top: 42px
+	top: 0
+	left: 0
+	text-align: center
+	.subject
+		background-color: #5e5e5e
+		height: 50px
+		line-height: 50px
+		color: #fff
+		font-size: 17px
+		font-weight: bold
+		text-indent: 15px
+		text-align: left
+		span
+			font-size: 20px
+			letter-spacing: 0.6px
+			color: #edc23e
+			padding-left: 6px
+	.sub-title
+		text-indent: 15px
+		line-height: 30px
+		color: #5e5e5e
+		font-size: 13px
+		background-color: #e9e9e9
+		text-align: left
+		position: fixed
+		left: 0
+		//top: 0
+		width: 100%
+		z-index: 1
+	.main-wrap
+		position: relative
+		display: none
+		&.show
+			display: block
+	.table-wrap
+		background-color: #f8f8f8
+		overflow-y: scroll
+		-webkit-overflow-scrolling: touch
+	.bid-tab
+		border: solid 1px #d8a301
+		box-sizing: border-box
+		height: 35px
+		overflow: hidden
+		+border-radius(17.5px)
+		ul
+			margin: 0
+			padding: 0
+			font-size: 0
+		li
+			display: inline-block
+			font-size: 15px
+			font-weight: bold
+			line-height: 33px
+			height: 33px
+			width: 50%
+			margin: 0
+			padding: 0
+			color: #d8a301
+			box-sizing: border-box
+			border-right: 1px solid #d8a301
+			cursor: pointer
+			&.active
+				color: #fff
+				+linear-gradient(#edc23e,#c8a43f)
+			&:last-child
+				//width: calc(100% - 66%)
+				border-right: 0px solid #d8a301
+	
+	.bid-area
+		width: calc(100% - 30px)
+		bottom: 0
+		left: 15px
+		position: fixed
+		min-height: 220px
+		.set-btn
+			margin: 3px auto 12px
+			height: 55px
+			display: block
+
+			.set-panel
+				float: left
+				&:last-child
+					float: right
+				h3
+					font-size: 11px
+					color: #9b9b9b	
+					line-height: 20px
+					margin: 0	
+				.option
+					height: 35px
+					line-height: 35px
+					position: relative
+					font-size: 17px
+					box-sizing: border-box
+					color: #d8a301
+					width: 150px
+					border: solid 1px #9b9b9b
+					left: 0
+					+border-radius(17.5px)
+					select
+						font-size: 17px
+						color: #d8a301
+						border: 0
+						background-color: transparent
+						-webkit-appearance: none
+						&:focus
+							outline: none
+					.rbtn
+						width: 30px
+						height: 30px
+						line-height: 28px
+						box-sizing: border-box
+						top: 1.5px
+						border: solid 1px #d8a301
+						position: absolute
+						cursor: pointer
+						+border-radius(50%)
+						&.reduce
+							left: 1.5px
+						&.add
+							right: 1.5px
+					@media screen and (max-width: 320px)
+						width: 120px
+
+		.bid-btn
+			width: 100%
+			position: relative
+			clear: both
+			display: none
+			&.show
+				display: block
+			.lbtn,
+			.rbtn,
+			.index
+				color: #fff
+				line-height: 28px
+				width: 100px
+				padding-bottom: 10px
+				position: absolute
+				top: 0
+				font-size: 18px
+				font-weight: bold
+				box-sizing: border-box
+				box-shadow: inset 0 1.5px 1px 0 rgba(255,255,255,.9)
+				+border-radius(4px)
+				i
+					font-size: 9px
+					display: block
+					line-height: 12px
+					padding-top: 10px
+					font-style: normal
+				@media screen and (max-width: 320px)
+					width: 80px
+
+			.lbtn
+				left: 0px
+				cursor: pointer
+			.rbtn
+				right: 0px
+				cursor: pointer
+			.index
+				position: relative
+				display: inline-block
+				margin: auto
+				width: auto
+				height: 50px
+				line-height: 50px
+				margin: 5px
+				padding: 0 18px
+				border:  solid 2px #9b9b9b
+				color: #9b9b9b
+				+border-radius(4px)
+				span
+					font-size: 20px
+					font-weight: bold
+					color: #4a90e2
+				@media screen and (max-width: 320px)
+					padding: 0 12px
+		#odd-even
+			.lbtn
+				border: solid 1px #3770ba
+				+linear-gradient(#4a90e2,#3770ba)
+			.rbtn
+				border: solid 1px #ce7929
+				+linear-gradient(#f89b36,#ce7929)
+		#big-small
+			.lbtn
+				border: solid 1px #8255ad
+				+linear-gradient(#9761c9,#8255ad)
+			.rbtn
+				border: solid 1px #d5aa38
+				+linear-gradient(#f6c33f,#d5aa38)				
+
+
+
 
 
 

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="21px" viewBox="0 0 20 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>ABFED6F4-909A-4846-974D-CA61E4322AD3</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <circle id="path-1" cx="10" cy="10" r="10"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="20" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="商品列表-A" transform="translate(-30.000000, -379.000000)" stroke="#F64728">
+            <g id="Group" transform="translate(0.000000, 264.000000)">
+                <g id="Main">
+                    <g id="Type-Copy" transform="translate(0.000000, 97.400000)">
+                        <g id="status_close" transform="translate(30.000000, 18.000000)">
+                            <use id="Oval-66" mask="url(#mask-2)" stroke-width="6" xlink:href="#path-1"></use>
+                            <path d="M3,17.1421356 L17.1421357,3" id="Line" stroke-width="3"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

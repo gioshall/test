@@ -17,7 +17,7 @@
     <h2 class="account-name status-open">Ryoko Hirosue</h2>
     <h3>现金余额</h3>
     <div class="cash">1,215,000.00<span class="currency">CNY</span></div>
-    <div class="btn">存款</div>
+    <button class="btn">存款</button>
 
   </div>
 
@@ -115,5 +115,13 @@
       </div>
     </div>
   </footer>
+
+<script src="https://code.jquery.com/jquery-1.7.1.js"></script>
+<script>
+  $('input[type="checkbox"]').on('change', function() {
+    $('input[type="checkbox"]').not(this).prop('checked', false);
+  });
+</script>
+
 </body>
 </html>

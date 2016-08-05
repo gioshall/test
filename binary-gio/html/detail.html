@@ -17,7 +17,7 @@
     <div class="category-item-select">外汇</div>
     <div class="category-item">指数</div>
     <div class="category-item">原产品</div>
-    <div onclick="timePickerOnClick()"><img width="20px" height="20px" src="../icons/icon-clock@3x.png" /></div>
+    <div onclick="timePickerOnClick()"><img width="20px" height="20px" src="../images/icon-clock@3x.png" /></div>
     <div style="display: flex; align-items: center">
       <span style="margin-right: 4px">組</span>
       <label class="switch">
@@ -38,7 +38,7 @@
           <div class="detail-card-content-item">
             <div>$300</div>
             <div style="margin-left: 15px">
-            <img width="12px" height="7px" src="../icons/icon-arrow-down.svg" />
+            <img width="12px" height="7px" src="../images/icon-arrow-down.svg" />
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@
           </div>
           <div class="detail-card-content-item">
             <div>-$200</div>
-            <div style="margin-left: 15px"><img width="12px" height="7px" src="../icons/icon-arrow-up.svg" /></div>
+            <div style="margin-left: 15px"><img width="12px" height="7px" src="../images/icon-arrow-up.svg" /></div>
           </div>
         </div>
         <div class="detail-card-content-item-wrapper">
@@ -78,6 +78,8 @@
           </div>
           <div class="icon-winlose icon-lose">输</div>
         </div>
+
+        <div class="order-number">订单编号 472910534</div>
       </div>
       <div class="detail-card-footer">
         <div class="detail-card-footer-item">
@@ -108,7 +110,7 @@
           </div>
           <div class="detail-card-content-item">
             <div>$300</div>
-            <div style="margin-left: 15px"><img width="12px" height="7px" src="../icons/icon-arrow-down.svg" /></div>
+            <div style="margin-left: 15px"><img width="12px" height="7px" src="../images/icon-arrow-down.svg" /></div>
           </div>
         </div>
         <div class="detail-card-content-item-wrapper">
@@ -180,8 +182,8 @@
       </div>
       <div class="time-picker-item">从 <input type="date" class="date"/> 到 <input type="date" class="date"/></div>
       <div class="time-picker-footer">
-        <div class="btn small cancel" onclick="hideTimePicker()">取消</div>
-        <div class="btn small" onclick="hideTimePicker()">确认</div>
+        <button class="btn small cancel" onclick="hideTimePicker()">取消</button>
+        <button class="btn small" onclick="hideTimePicker()">确认</button>
       </div>
     </div>
   </div>
