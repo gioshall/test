@@ -16,7 +16,7 @@ $('#nav-icon').click(function(){
 	$('body').toggleClass('active');
 });
 
-$('body.active').bind('touchmove', function(e) {
+$('body').bind('touchmove', function(e) {
 	e.preventDefault();
 });
 
