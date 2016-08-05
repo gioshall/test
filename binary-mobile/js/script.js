@@ -14,6 +14,9 @@ function gotoDetail() {
 $('#nav-icon').click(function(){
 	$(this).toggleClass('open');
 	$('body, .wrapper, .side-menu').toggleClass('active');
+	$(document).bind('touchmove', function(e) {
+	e.preventDefault();
+});
 });
 
 $('input[type="checkbox"]').on('change', function() {
