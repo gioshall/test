@@ -413,8 +413,8 @@
       </div>
     </div>
   </div>
-<!-- side menu -->
 
+<!-- side menu -->
 <div class="side-menu">
   
   <div class="main-block">
@@ -497,7 +497,6 @@
       </ul>
     </div>   
   </section>
-
 </div>
 
 
@@ -549,10 +548,8 @@
 
   $('#nav-icon').click(function(){
     $(this).toggleClass('open');
-    $('body, header, section, .side-menu').toggleClass('active');
+    $('header, section, .side-menu').toggleClass('active');
   });
-
-
 
   $('input[type="checkbox"]').on('change', function() {
     $('input[type="checkbox"]').not(this).prop('checked', false);

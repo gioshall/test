@@ -3,11 +3,6 @@ body {
   height: 100%;
   position: relative;
 }
-body.active {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
 body.launcher {
   background-image: url("../images/launch-bg.svg");
   background-repeat: no-repeat;
