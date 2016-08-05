@@ -13,10 +13,10 @@ function gotoDetail() {
 
 $('#nav-icon').click(function(){
 	$(this).toggleClass('open');
-	$('.wrapper, .side-menu').toggleClass('active');
+	$('body').toggleClass('active');
 });
 
-$('.wrapper.active').bind('touchmove', function(e) {
+$('body.active').bind('touchmove', function(e) {
 	e.preventDefault();
 });
 
