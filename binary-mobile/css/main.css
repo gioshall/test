@@ -123,10 +123,10 @@ body.login .login-form .remember input[type=checkbox] {
   transition-delay: 0.2s;
 }
 .wrapper.active {
-  -moz-transform: translateX(80%);
-  -ms-transform: translateX(80%);
-  -webkit-transform: translateX(80%);
-  transform: translateX(80%);
+  -moz-transform: translateX(280px);
+  -ms-transform: translateX(280px);
+  -webkit-transform: translateX(280px);
+  transform: translateX(280px);
   overflow: hidden;
 }
 .wrapper.active #nav-icon {
@@ -626,7 +626,7 @@ header div.refresh {
 }
 
 .side-menu {
-  width: 80%;
+  width: 280px;
   height: 100%;
   left: 0;
   top: 0;
@@ -637,10 +637,10 @@ header div.refresh {
   -o-transition: 0.2s;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
+  -moz-transform: translateX(-280px);
+  -ms-transform: translateX(-280px);
+  -webkit-transform: translateX(-280px);
+  transform: translateX(-280px);
   transition-delay: 0.2s;
 }
 .side-menu.active {
