@@ -8,7 +8,13 @@
   <link rel="stylesheet" type="text/css" href="../css/main.css">
 </head>
 <body>
+<div class="wrapper">
+
   <header>
+    <!-- hamburger -->
+    <div id="nav-icon">
+      <i></i><i></i><i></i><i></i>
+    </div>
     <div>交易中订单</div>
   </header>
 
@@ -110,5 +116,94 @@
       </div>
     </div>
   </section>
+</div>
+
+<!-- side menu -->
+<div class="side-menu">
+  
+  <div class="main-block">
+    <h2 class="account-name status-open">Ryoko Hirosue</h2>
+    <h3>现金余额</h3>
+    <div class="cash">1,215,000.00<span class="currency">CNY</span></div>
+    <button class="btn">存款</button>
+  </div>
+
+  <section class="card-list menu">
+    <div class="menu-list">
+      <ul>
+        <li>
+          <input type="checkbox" id="checkbox-01"/>
+          <label for="checkbox-01" class="transfer toggle">交易</label>
+          <div class="content">
+            <ul>
+              <li>我的最爱</li>
+              <li>外汇</li>
+              <li>商品</li>
+              <li>指数</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <input type="checkbox" id="checkbox-02"/>
+          <label for="checkbox-02" class="market toggle">市场动态</label>
+          <div class="content">
+            <ul>
+              <li>新闻</li>
+              <li>消息</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <input type="checkbox" id="checkbox-03"/>
+          <label for="checkbox-03" class="report toggle">报表</label>
+          <div class="content">
+            <ul>
+              <li>未到期注单</li>
+              <li>下单记录</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <input type="checkbox" id="checkbox-04"/>
+          <label for="checkbox-04" class="profile toggle">账户管理</label>
+          <div class="content">
+            <ul>
+              <li>个人资料</li>
+              <li>存款</li>
+              <li>提款</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <input type="checkbox" id="checkbox-05"/>
+          <label for="checkbox-05" class="more toggle">更多</label>
+          <div class="content">
+            <ul>
+              <li>常见问题</li>
+              <li>联系我们</li>
+              <li>设置</li>
+              <li>版本号</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <input type="checkbox" id="checkbox-06"/>
+          <label for="checkbox-06" class="sale">促销优惠</label>
+          <div class="content">
+          </div>
+        </li>
+        <li>
+          <input type="checkbox" id="checkbox-07"/>
+          <label for="checkbox-07" class="logout">登出</label>
+          <div class="content">
+          </div>
+        </li>
+      </ul>
+    </div>   
+  </section>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.7.1.js"></script>
+<script src="../js/script.js"></script>
 </body>
 </html>

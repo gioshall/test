@@ -3,6 +3,9 @@ body {
   height: 100%;
   position: relative;
 }
+body.active {
+  overflow: hidden;
+}
 body.launcher {
   background-image: url("../images/launch-bg.svg");
   background-repeat: no-repeat;
@@ -103,6 +106,43 @@ body.login .login-form .remember input[type=checkbox] {
   margin-right: 5px;
 }
 
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  transition-delay: 0.2s;
+}
+.wrapper.active {
+  -moz-transform: translateX(80%);
+  -ms-transform: translateX(80%);
+  -webkit-transform: translateX(80%);
+  transform: translateX(80%);
+  overflow: hidden;
+}
+.wrapper.active #nav-icon {
+  z-index: 80;
+}
+.wrapper.active header:before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 50;
+}
+
 header {
   height: 42px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#edc23e), to(#c8a43f));
@@ -120,42 +160,6 @@ header {
   right: 0;
   box-shadow: 0 1.5px 1px 0 rgba(0, 0, 0, 0.5);
   z-index: 2;
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  -moz-transition: 0.2s;
-  -o-transition: 0.2s;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  transition-delay: 0.2s;
-}
-header + section {
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  -moz-transition: 0.2s;
-  -o-transition: 0.2s;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  transition-delay: 0.2s;
-}
-header + section.active:before {
-  content: "";
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 10;
-}
-header.active, header + section.active {
-  -moz-transform: translateX(80%);
-  -ms-transform: translateX(80%);
-  -webkit-transform: translateX(80%);
-  transform: translateX(80%);
 }
 header:after {
   content: "";
