@@ -21,7 +21,9 @@ $('#nav-icon').click(function(){
 			e.preventDefault();
 		});
 	} else {
-		return true;
+		$('body').bind('touchmove', function(e) {
+			return true;
+		});		
 	}
 });
 
