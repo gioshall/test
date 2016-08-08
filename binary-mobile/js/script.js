@@ -20,6 +20,8 @@ $('#nav-icon').click(function(){
 		$('body').bind('touchmove', function(e) {
 			e.preventDefault();
 		});
+	} else {
+		return true;
 	}
 });
 
