@@ -15,13 +15,14 @@ $('#nav-icon').click(function(){
 	$('body').toggleClass('active');
 	var hasc = $('body').attr('class');
 	if ( hasc == 'active' ) {
-		//console.log('yes')
+		console.log('yes');
 		$('body').bind('touchmove', function(e) {
 			e.preventDefault();
 		});
 	} else {
-		$('body').unbind('touchmove', function(e) {
-			e.preventDefault();
+		console.log('no');
+		$('body').bind('touchmove', function(e) {
+			return true;
 		});		
 	}
 });
