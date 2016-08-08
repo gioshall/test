@@ -13,18 +13,15 @@ function gotoDetail() {
 $('#nav-icon').click(function(){
 	$(this).toggleClass('open');
 	$('body').toggleClass('active');
-	var hasc = $('body').attr('class');
-	if ( hasc == 'active' ) {
-		console.log('yes');
-		$('body').bind('touchmove', function(e) {
+	
+	$('body').bind('touchmove', function(e) {
+		var hasc = $('body').attr('class');
+		if ( hasc == 'active' ) {
 			e.preventDefault();
-		});
-	} else {
-		console.log('no');
-		$('body').bind('touchmove', function(e) {
+		} else {
 			return true;
-		});		
-	}
+		}
+	});
 });
 
 
