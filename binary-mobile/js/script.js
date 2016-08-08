@@ -14,17 +14,17 @@ function gotoDetail() {
 $('#nav-icon').click(function(){
 	$(this).toggleClass('open');
 	$('body').toggleClass('active');
-	var hasc = $('body').attr('class');
-	if ( hasc == 'active' ) {
-		//console.log('yes')
-		$('body').bind('touchmove', function(e) {
-			e.preventDefault();
-		});
-	} else {
-		$('body').bind('touchmove', function(e) {
-			return true;
-		});		
-	}
+	// var hasc = $('body').attr('class');
+	// if ( hasc == 'active' ) {
+	// 	//console.log('yes')
+	// 	$('body').bind('touchmove', function(e) {
+	// 		e.preventDefault();
+	// 	});
+	// } else {
+	// 	$('body').bind('touchmove', function(e) {
+	// 		return true;
+	// 	});		
+	// }
 });
 
 
