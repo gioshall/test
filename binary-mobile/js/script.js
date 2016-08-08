@@ -14,19 +14,22 @@ function gotoDetail() {
 $('#nav-icon').click(function(){
 	$(this).toggleClass('open');
 	$('body').toggleClass('active');
-	// var hasc = $('body').attr();
-	// console.log(hasc);
+	var hasc = $('body').attr('class');
+	if ( hasc == 'active' ) {
+		//console.log('yes')
+		$('body').bind('touchmove', function(e) {
+			e.preventDefault();
+		});
+	}
 });
 
 
-var hasc = $('body').attr('class');
-// if ( hasc == active ) {
+// var hasc = $('body').attr('class');
+// if ( hasc == 'active' ) {
 // 	console.log('yes')
 // }
 
-// $('body.active').bind('touchmove', function(e) {
-// 	e.preventDefault();
-// });
+
 
 $('input[type="checkbox"]').on('change', function() {
 	$('input[type="checkbox"]').not(this).prop('checked', false);
