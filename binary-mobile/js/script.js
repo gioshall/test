@@ -1,3 +1,5 @@
+// timepicker
+
 function timePickerOnClick() {
   document.getElementById('time-picker').style.display = 'block';
 }
@@ -29,10 +31,10 @@ $('input[type="checkbox"]').on('change', function() {
 	$('input[type="checkbox"]').not(this).prop('checked', false);
 });
 
-//transaction
+// transaction
 
   function bidOverlay() {
-      $('#bid-overlay').attr('class','');
+	$('#bid-overlay').attr('class','');
   }
 
   $('.bid-btn .lbtn, .bid-btn .rbtn').click(function(){
