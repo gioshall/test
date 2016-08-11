@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_log</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="z" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon_log" fill="#5E5E5E">
+            <path d="M4,4.99742191 C4,3.89427625 4.89358348,3 5.99287235,3 L12.5,3 L12.5,10.5 L20,10.5 L20,19.9968529 C20,21.1031605 19.1054862,22 18.0059397,22 L5.99406028,22 C4.8927712,22 4,21.1090746 4,20.0025781 L4,4.99742191 Z" id="Rectangle-7"></path>
+            <polygon id="Rectangle-8" points="14 3 20 9 14 9"></polygon>
+        </g>
+    </g>
+</svg>

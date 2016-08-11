@@ -77,9 +77,9 @@ header .logo {
   background-image: url("../images/logo.svg");
   background-repeat: no-repeat;
   position: absolute;
-  width: 40px;
-  height: 40px;
-  top: 5px;
+  width: 35px;
+  height: 35px;
+  top: 7.5px;
   left: 20px;
   background-position: center;
   background-size: 100% auto;
@@ -205,6 +205,216 @@ header .time-lang .lang-list .icon-arrow-down {
 }
 .login-form .logon-input .captcha img {
   width: 120px;
+}
+
+.menu-list {
+  margin: 10px 0;
+  min-height: calc(100vh - 475px);
+}
+.menu-list li {
+  font-size: 15px;
+  line-height: 40px;
+  background-size: 25px 25px;
+  background-position: 8px center;
+  width: 80%;
+  position: relative;
+  margin: auto;
+}
+.menu-list li a {
+  width: 100%;
+  text-decoration: none;
+  text-indent: 40px;
+  display: block;
+  position: relative;
+  color: #5e5e5e;
+}
+.menu-list li a:hover {
+  color: #d8a301;
+}
+.menu-list li.dashboard {
+  background-image: url("../images/icon-dashboard.svg");
+  background-repeat: no-repeat;
+}
+.menu-list li.transfer {
+  background-image: url("../images/icon-transfer.svg");
+  background-repeat: no-repeat;
+}
+.menu-list li.market {
+  background-image: url("../images/icon-market.svg");
+  background-repeat: no-repeat;
+}
+.menu-list li.report {
+  background-image: url("../images/icon-report.svg");
+  background-repeat: no-repeat;
+}
+.menu-list li.profile {
+  background-image: url("../images/icon-profile.svg");
+  background-repeat: no-repeat;
+}
+.menu-list li.team {
+  background-image: url("../images/icon-team.png");
+  background-repeat: no-repeat;
+}
+.menu-list li.more {
+  background-image: url("../images/icon-more.svg");
+  background-repeat: no-repeat;
+}
+.menu-list li.setting {
+  background-image: url("../images/icon-setting.svg");
+  background-repeat: no-repeat;
+}
+.menu-list li.sale {
+  background-image: url("../images/icon-sale.svg");
+  background-repeat: no-repeat;
+}
+.menu-list li.logout {
+  background-image: url("../images/icon-logout.svg");
+  background-repeat: no-repeat;
+}
+.menu-list li.log {
+  background-image: url("../images/icon-log.svg");
+  background-repeat: no-repeat;
+}
+.menu-list li:hover a, .menu-list li.active a {
+  color: #d8a301;
+}
+.menu-list li:hover.dashboard, .menu-list li.active.dashboard {
+  background-image: url("../images/icon-dashboard-on.svg");
+  background-repeat: no-repeat;
+}
+.menu-list li:hover.transfer, .menu-list li.active.transfer {
+  background-image: url("../images/icon-transfer-on.svg");
+  background-repeat: no-repeat;
+}
+.menu-list li:hover.market, .menu-list li.active.market {
+  background-image: url("../images/icon-market-on.svg");
+  background-repeat: no-repeat;
+}
+.menu-list li:hover.report, .menu-list li.active.report {
+  background-image: url("../images/icon-report-on.svg");
+  background-repeat: no-repeat;
+}
+.menu-list li:hover.profile, .menu-list li.active.profile {
+  background-image: url("../images/icon-profile-on.svg");
+  background-repeat: no-repeat;
+}
+.menu-list li:hover.team, .menu-list li.active.team {
+  background-image: url("../images/icon-team-on.png");
+  background-repeat: no-repeat;
+}
+.menu-list li:hover.more, .menu-list li.active.more {
+  background-image: url("../images/icon-more-on.svg");
+  background-repeat: no-repeat;
+}
+.menu-list li:hover.setting, .menu-list li.active.setting {
+  background-image: url("../images/icon-setting-on.svg");
+  background-repeat: no-repeat;
+}
+.menu-list li:hover.sale, .menu-list li.active.sale {
+  background-image: url("../images/icon-sale-on.svg");
+  background-repeat: no-repeat;
+}
+.menu-list li:hover.logout, .menu-list li.active.logout {
+  background-image: url("../images/icon-logout-on.svg");
+  background-repeat: no-repeat;
+}
+.menu-list li:hover.log, .menu-list li.active.log {
+  background-image: url("../images/icon-log-on.svg");
+  background-repeat: no-repeat;
+}
+
+.side-menu {
+  width: 250px;
+  height: calc(100vh - 50px);
+  left: 0;
+  top: 50px;
+  position: relative;
+  overflow: auto;
+  z-index: 100;
+  background-color: #e9e9e9;
+}
+.side-menu .main-block {
+  padding: 15px 0;
+  text-align: center;
+  height: 150px;
+}
+.side-menu .main-block .user-pic {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.side-menu .main-block .user-pic img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.side-menu .main-block .account-name {
+  font-size: 15px;
+  margin: 10px 0;
+}
+.side-menu .main-block .cash {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #4a4a4a;
+}
+.side-menu .main-block .cash .currency {
+  font-size: 12px;
+  padding: 3px;
+  border: 1px #4a4a4a solid;
+  margin-left: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.side-menu .qnav {
+  width: 80%;
+  padding: 0 10%;
+  background-color: #efefef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.side-menu .qnav .gnav-item {
+  flex: 1;
+  height: 35px;
+  width: 35px;
+  line-height: 35;
+  background-size: auto 70%;
+  background-position: center;
+}
+.side-menu .qnav .gnav-item.user {
+  background-image: url("../images/icon-profile.svg");
+  background-repeat: no-repeat;
+}
+.side-menu .qnav .gnav-item.group {
+  background-image: url("../images/icon-group.png");
+  background-repeat: no-repeat;
+}
+.side-menu .qnav .gnav-item.mail {
+  background-image: url("../images/icon-mail.png");
+  background-repeat: no-repeat;
+}
+.side-menu .contact-qr {
+  background-color: #efefef;
+  width: 100%;
+  padding: 10px 0 20px;
+  text-align: center;
+  color: #9b9b9b;
+}
+.side-menu .contact-qr h5 {
+  font-size: 13px;
+  line-height: 3;
+}
+.side-menu .contact-qr img {
+  width: 120px;
+  display: block;
+  margin: auto;
 }
 
 .btn {

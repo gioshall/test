@@ -403,6 +403,35 @@ header div.refresh {
   color: #555;
   line-height: 50px;
 }
+.list-content .favcheck {
+  display: none;
+}
+.list-content .favcheck + label {
+  position: relative;
+  text-indent: 0;
+  margin: 0;
+}
+.list-content .favcheck + label i {
+  margin: 0;
+  top: 1px;
+  left: 5px;
+  position: absolute;
+  cursor: pointer;
+  -moz-transition: 0.1s;
+  -o-transition: 0.1s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+.list-content .favcheck + label i.fa-star-o {
+  color: #999;
+}
+.list-content .favcheck + label i.fa-star {
+  color: #edc23e;
+  opacity: 0;
+}
+.list-content .favcheck:checked + label i.fa-star {
+  opacity: 1;
+}
 .list-content:nth-child(odd) {
   background-color: #efefef;
 }
