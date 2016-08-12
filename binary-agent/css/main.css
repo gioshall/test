@@ -1098,6 +1098,7 @@ header .time-lang .btn {
   width: 100%;
   display: block;
   position: relative;
+  cursor: pointer;
 }
 .menu-list ul label.toggle:after {
   content: "";
@@ -1284,6 +1285,7 @@ header .time-lang .btn {
   background-size: auto 70%;
   background-position: center;
   position: relative;
+  cursor: pointer;
 }
 .side-menu .qnav .gnav-item.user {
   background-image: url("../images/icon-profile.svg");
