@@ -280,12 +280,24 @@ header
 			line-height: 35
 			background-size: auto 70%
 			background-position: center
+			position: relative
 			&.user
 				+bg(icon-profile,svg)
 			&.group
 				+bg(icon-group,png)
 			&.mail
 				+bg(icon-mail,png)
+			&.notice-new:after
+				content: ''
+				display: block
+				position: absolute
+				width: 8px
+				height: 8px
+				right: 28%
+				top: 5px
+				background-color: $primary-color
+				+border-radius(50%)
+
 	.contact-qr
 		background-color: #efefef
 		width: 100%

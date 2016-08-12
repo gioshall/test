@@ -1283,6 +1283,7 @@ header .time-lang .btn {
   line-height: 35;
   background-size: auto 70%;
   background-position: center;
+  position: relative;
 }
 .side-menu .qnav .gnav-item.user {
   background-image: url("../images/icon-profile.svg");
@@ -1295,6 +1296,19 @@ header .time-lang .btn {
 .side-menu .qnav .gnav-item.mail {
   background-image: url("../images/icon-mail.png");
   background-repeat: no-repeat;
+}
+.side-menu .qnav .gnav-item.notice-new:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  right: 28%;
+  top: 5px;
+  background-color: #edc23e;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
 }
 .side-menu .contact-qr {
   background-color: #efefef;
