@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>37CF127D-4B1F-40AE-BD53-6D76D59E7B77</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Agent-Home" transform="translate(-662.000000, -714.000000)">
+            <g id="Group-8-Copy" transform="translate(220.000000, 559.000000)">
+                <g id="td-copy-2" transform="translate(30.000000, 154.000000)">
+                    <g id="status_close" transform="translate(412.000000, 1.000000)">
+                        <circle id="Oval-27" fill="#D0011B" cx="10" cy="10" r="10"></circle>
+                        <g id="Group-17" transform="translate(5.000000, 5.000000)" fill="#FFFFFF">
+                            <path d="M2.07424167,9.84114527 L9.17747401,2.00493949 C9.54839185,1.59574712 9.51736421,0.963342835 9.10817183,0.592424995 C8.69897945,0.221507155 8.06657517,0.252534797 7.69565733,0.661727174 L0.592424995,8.49793295 C0.221507155,8.90712533 0.252534797,9.53952961 0.661727174,9.91044745 C1.07091955,10.2813653 1.70332383,10.2503376 2.07424167,9.84114527 L2.07424167,9.84114527 Z" id="icon_check"></path>
+                            <path d="M9.17747401,8.49793295 L2.07424167,0.661727174 C1.70332383,0.252534797 1.07091955,0.221507155 0.661727174,0.592424995 C0.252534797,0.963342835 0.221507155,1.59574712 0.592424995,2.00493949 L7.69565733,9.84114527 C8.06657517,10.2503376 8.69897945,10.2813653 9.10817183,9.91044745 C9.51736421,9.53952961 9.54839185,8.90712533 9.17747401,8.49793295 L9.17747401,8.49793295 Z" id="icon_check-copy"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

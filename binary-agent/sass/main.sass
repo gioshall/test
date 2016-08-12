@@ -131,52 +131,77 @@ header
 				vertical-align: middle
 			img
 				width: 120px
+
+
 .menu-list
 	margin: 10px 0
 	min-height: calc(100vh - 475px)
-	li
+	ul
+		list-style-type: none
+		margin: 0
+		padding: 0
 		font-size: 15px
 		line-height: 40px
-		background-size: 25px 25px
-		background-position: 8px center
-		width: 80%
-		position: relative
-		margin: auto
-		a
-			width: 100%
-			text-decoration: none
+		li
+			width: 80%
+			margin: auto
+			.content
+				height: 0
+				overflow: hidden
+				+transition(0.3s)
+				ul
+					text-indent: 20px
+					font-size: 13px
+					line-height: 30px
+		label
+			background-size: 25px 25px
+			background-position: 8px center
 			text-indent: 40px
+			width: 100%
 			display: block
 			position: relative
-			color: $font-color			
-			&:hover
-				color: $darker-color
-		&.dashboard
-			+bg(icon-dashboard,svg)
-		&.transfer
-			+bg(icon-transfer,svg)
-		&.market
-			+bg(icon-market,svg)
-		&.report
-			+bg(icon-report,svg)
-		&.profile
-			+bg(icon-profile,svg)
-		&.team
-			+bg(icon-team,png)
-		&.more
-			+bg(icon-more,svg)
-		&.setting
-			+bg(icon-setting,svg)
-		&.sale
-			+bg(icon-sale,svg)
-		&.logout
-			+bg(icon-logout,svg)
-		&.log
-			+bg(icon-log,svg)
-		&:hover,
-		&.active
-			a
-				color: $darker-color
+			&.toggle
+				&:after
+					content: ''
+					width: 15px
+					height: 15px
+					display: block
+					background-size: 100%
+					position: absolute
+					right: 0px
+					margin-top: -23px
+					+bg(icon-arrow-down,svg)
+			&.dashboard
+				+bg(icon-dashboard,svg)
+			&.transfer
+				+bg(icon-transfer,svg)
+			&.market
+				+bg(icon-market,svg)
+			&.report
+				+bg(icon-report,svg)
+			&.profile
+				+bg(icon-profile,svg)
+			&.team
+				+bg(icon-team,png)
+			&.more
+				+bg(icon-more,svg)
+			&.setting
+				+bg(icon-setting,svg)
+			&.sale
+				+bg(icon-sale,svg)
+			&.logout
+				+bg(icon-logout,svg)
+			&.log
+				+bg(icon-log,svg)
+		[type=radio],
+		[type=checkbox]
+			display: none
+		[type=checkbox]:checked ~ label
+			color: #d8a301
+			&.toggle
+				&:after
+					margin-top: -25px
+					+bg(icon-arrow-up,svg)
 			&.dashboard
 				+bg(icon-dashboard-on,svg)
 			&.transfer
@@ -199,6 +224,10 @@ header
 				+bg(icon-logout-on,svg)
 			&.log
 				+bg(icon-log-on,svg)
+			
+		[type=checkbox]:checked ~ label ~ .content
+			height: auto
+			+transition(0.3s)
 .side-menu
 	width: 250px
 	height: calc(100vh - 50px)
@@ -289,21 +318,136 @@ header
 		font-size: 13px
 		margin-top: 10px
 		td
-			height: 13px	
+			height: 20px
+
 		thead
 			.table-head
 				color: #4a4a4a
 				font-weight: bold
 				&.table-head-gold
 					background-color: #edc23e
+				&.table-head-dgray
+					background-color: #5e5e5e
+					color: #efefef
+		tbody
+			th
+				font-weight: bold
 		&.table-announce
 			tr
 				td:nth-of-type(2)
 					color: $darker-color
+		.level
+			font-size: 11px
+			width: 30px
+			text-align: center
+			display: inline-block
+			line-height: 16px
+			position: relative
+			color: #fff
+			background-color: #ccc
+			margin-right: 5px
+			+transform(scale(0.8))
+			&:after
+				content: ''
+				border-top: solid transparent 8px
+				border-bottom: solid transparent 8px
+				border-left: solid #ccc 8px
+				position: absolute
+				right: -8px
+			&.lv-hse
+				background-color: $level-01
+				&:after
+					border-left: $level-01 solid 8px
+			&.lv-sm
+				background-color: $level-02
+				&:after
+					border-left: $level-02 solid 8px
+			&.lv-m
+				background-color: $level-03
+				&:after
+					border-left: $level-03 solid 8px
+			&.lv-ma
+				background-color: $level-04
+				&:after
+					border-left: $level-04 solid 8px
+			&.lv-a
+				background-color: $level-05
+				&:after
+					border-left: $level-05 solid 8px
+			&.lv-pl
+				background-color: $level-06
+				&:after
+					border-left: $level-06 solid 8px	
+			&.lv-sub
+				background-color: $level-07
+				&:after
+					border-left: $level-07 solid 8px
+
+		.toggle
+			position: relative		
+			i
+				width: 12px
+				height: 12px
+				display: block
+				background-size: 100%
+				position: absolute
+				top: 50%
+				margin-top: -3px
+				right: 5px
+				cursor: pointer		
+			&.collapse i
+				+bg(icon-arrow-up,svg)
+			&.expand i
+				+bg(icon-arrow-down,svg)
+
+
+		.sum
+			background-color: #dadada
+			td
+				font-weight: bold
+				color: #333
+
+		.search-input
+			border: 0
+			padding: 2px
+			display: inline-block
+			vertical-align: middle
+			+border-radius(2px)
+			&:focus
+				outline: none
+		.round-button
+			margin-right: 10px
+				
+		.status
+			width: 15px
+			height: 15px
+			display: block
+			background-size: 100%
+			&.st-open
+				+bg(status-open,svg)
+			&.st-close
+				+bg(status-close,svg)
+			&.st-lock
+				+bg(status-lock,svg)
+			&.st-suspend
+				+bg(status-suspend,svg)
+
 	.pure-left
 		table
 			width: calc(100% - 10px)
 
+.round-button
+	display: inline-block
+	width: 18px
+	height: 18px
+	line-height: 18px
+	font-size: 11px
+	text-align: center
+	border: $primary-color 1px solid
+	cursor: pointer
+	vertical-align: middle
+	box-sizing: border-box
+	+border-radius(50%)
 
 .btn
 	text-align: center

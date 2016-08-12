@@ -1067,116 +1067,156 @@ header .time-lang .btn {
   margin: 10px 0;
   min-height: calc(100vh - 475px);
 }
-.menu-list li {
+.menu-list ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   font-size: 15px;
   line-height: 40px;
-  background-size: 25px 25px;
-  background-position: 8px center;
+}
+.menu-list ul li {
   width: 80%;
-  position: relative;
   margin: auto;
 }
-.menu-list li a {
-  width: 100%;
-  text-decoration: none;
+.menu-list ul li .content {
+  height: 0;
+  overflow: hidden;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.menu-list ul li .content ul {
+  text-indent: 20px;
+  font-size: 13px;
+  line-height: 30px;
+}
+.menu-list ul label {
+  background-size: 25px 25px;
+  background-position: 8px center;
   text-indent: 40px;
+  width: 100%;
   display: block;
   position: relative;
-  color: #5e5e5e;
 }
-.menu-list li a:hover {
-  color: #d8a301;
+.menu-list ul label.toggle:after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  display: block;
+  background-size: 100%;
+  position: absolute;
+  right: 0px;
+  margin-top: -23px;
+  background-image: url("../images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
 }
-.menu-list li.dashboard {
+.menu-list ul label.dashboard {
   background-image: url("../images/icon-dashboard.svg");
   background-repeat: no-repeat;
 }
-.menu-list li.transfer {
+.menu-list ul label.transfer {
   background-image: url("../images/icon-transfer.svg");
   background-repeat: no-repeat;
 }
-.menu-list li.market {
+.menu-list ul label.market {
   background-image: url("../images/icon-market.svg");
   background-repeat: no-repeat;
 }
-.menu-list li.report {
+.menu-list ul label.report {
   background-image: url("../images/icon-report.svg");
   background-repeat: no-repeat;
 }
-.menu-list li.profile {
+.menu-list ul label.profile {
   background-image: url("../images/icon-profile.svg");
   background-repeat: no-repeat;
 }
-.menu-list li.team {
+.menu-list ul label.team {
   background-image: url("../images/icon-team.png");
   background-repeat: no-repeat;
 }
-.menu-list li.more {
+.menu-list ul label.more {
   background-image: url("../images/icon-more.svg");
   background-repeat: no-repeat;
 }
-.menu-list li.setting {
+.menu-list ul label.setting {
   background-image: url("../images/icon-setting.svg");
   background-repeat: no-repeat;
 }
-.menu-list li.sale {
+.menu-list ul label.sale {
   background-image: url("../images/icon-sale.svg");
   background-repeat: no-repeat;
 }
-.menu-list li.logout {
+.menu-list ul label.logout {
   background-image: url("../images/icon-logout.svg");
   background-repeat: no-repeat;
 }
-.menu-list li.log {
+.menu-list ul label.log {
   background-image: url("../images/icon-log.svg");
   background-repeat: no-repeat;
 }
-.menu-list li:hover a, .menu-list li.active a {
+.menu-list ul [type=radio],
+.menu-list ul [type=checkbox] {
+  display: none;
+}
+.menu-list ul [type=checkbox]:checked ~ label {
   color: #d8a301;
 }
-.menu-list li:hover.dashboard, .menu-list li.active.dashboard {
+.menu-list ul [type=checkbox]:checked ~ label.toggle:after {
+  margin-top: -25px;
+  background-image: url("../images/icon-arrow-up.svg");
+  background-repeat: no-repeat;
+}
+.menu-list ul [type=checkbox]:checked ~ label.dashboard {
   background-image: url("../images/icon-dashboard-on.svg");
   background-repeat: no-repeat;
 }
-.menu-list li:hover.transfer, .menu-list li.active.transfer {
+.menu-list ul [type=checkbox]:checked ~ label.transfer {
   background-image: url("../images/icon-transfer-on.svg");
   background-repeat: no-repeat;
 }
-.menu-list li:hover.market, .menu-list li.active.market {
+.menu-list ul [type=checkbox]:checked ~ label.market {
   background-image: url("../images/icon-market-on.svg");
   background-repeat: no-repeat;
 }
-.menu-list li:hover.report, .menu-list li.active.report {
+.menu-list ul [type=checkbox]:checked ~ label.report {
   background-image: url("../images/icon-report-on.svg");
   background-repeat: no-repeat;
 }
-.menu-list li:hover.profile, .menu-list li.active.profile {
+.menu-list ul [type=checkbox]:checked ~ label.profile {
   background-image: url("../images/icon-profile-on.svg");
   background-repeat: no-repeat;
 }
-.menu-list li:hover.team, .menu-list li.active.team {
+.menu-list ul [type=checkbox]:checked ~ label.team {
   background-image: url("../images/icon-team-on.png");
   background-repeat: no-repeat;
 }
-.menu-list li:hover.more, .menu-list li.active.more {
+.menu-list ul [type=checkbox]:checked ~ label.more {
   background-image: url("../images/icon-more-on.svg");
   background-repeat: no-repeat;
 }
-.menu-list li:hover.setting, .menu-list li.active.setting {
+.menu-list ul [type=checkbox]:checked ~ label.setting {
   background-image: url("../images/icon-setting-on.svg");
   background-repeat: no-repeat;
 }
-.menu-list li:hover.sale, .menu-list li.active.sale {
+.menu-list ul [type=checkbox]:checked ~ label.sale {
   background-image: url("../images/icon-sale-on.svg");
   background-repeat: no-repeat;
 }
-.menu-list li:hover.logout, .menu-list li.active.logout {
+.menu-list ul [type=checkbox]:checked ~ label.logout {
   background-image: url("../images/icon-logout-on.svg");
   background-repeat: no-repeat;
 }
-.menu-list li:hover.log, .menu-list li.active.log {
+.menu-list ul [type=checkbox]:checked ~ label.log {
   background-image: url("../images/icon-log-on.svg");
   background-repeat: no-repeat;
+}
+.menu-list ul [type=checkbox]:checked ~ label ~ .content {
+  height: auto;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .side-menu {
@@ -1294,7 +1334,7 @@ header .time-lang .btn {
   margin-top: 10px;
 }
 .wrapper table td {
-  height: 13px;
+  height: 20px;
 }
 .wrapper table thead .table-head {
   color: #4a4a4a;
@@ -1303,11 +1343,165 @@ header .time-lang .btn {
 .wrapper table thead .table-head.table-head-gold {
   background-color: #edc23e;
 }
+.wrapper table thead .table-head.table-head-dgray {
+  background-color: #5e5e5e;
+  color: #efefef;
+}
+.wrapper table tbody th {
+  font-weight: bold;
+}
 .wrapper table.table-announce tr td:nth-of-type(2) {
   color: #d8a301;
 }
+.wrapper table .level {
+  font-size: 11px;
+  width: 30px;
+  text-align: center;
+  display: inline-block;
+  line-height: 16px;
+  position: relative;
+  color: #fff;
+  background-color: #ccc;
+  margin-right: 5px;
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+}
+.wrapper table .level:after {
+  content: "";
+  border-top: solid transparent 8px;
+  border-bottom: solid transparent 8px;
+  border-left: solid #ccc 8px;
+  position: absolute;
+  right: -8px;
+}
+.wrapper table .level.lv-hse {
+  background-color: #FB7E7F;
+}
+.wrapper table .level.lv-hse:after {
+  border-left: #FB7E7F solid 8px;
+}
+.wrapper table .level.lv-sm {
+  background-color: #FDA964;
+}
+.wrapper table .level.lv-sm:after {
+  border-left: #FDA964 solid 8px;
+}
+.wrapper table .level.lv-m {
+  background-color: #3AC58F;
+}
+.wrapper table .level.lv-m:after {
+  border-left: #3AC58F solid 8px;
+}
+.wrapper table .level.lv-ma {
+  background-color: #1B64FB;
+}
+.wrapper table .level.lv-ma:after {
+  border-left: #1B64FB solid 8px;
+}
+.wrapper table .level.lv-a {
+  background-color: #7783A7;
+}
+.wrapper table .level.lv-a:after {
+  border-left: #7783A7 solid 8px;
+}
+.wrapper table .level.lv-pl {
+  background-color: #9F85BE;
+}
+.wrapper table .level.lv-pl:after {
+  border-left: #9F85BE solid 8px;
+}
+.wrapper table .level.lv-sub {
+  background-color: #71D2FF;
+}
+.wrapper table .level.lv-sub:after {
+  border-left: #71D2FF solid 8px;
+}
+.wrapper table .toggle {
+  position: relative;
+}
+.wrapper table .toggle i {
+  width: 12px;
+  height: 12px;
+  display: block;
+  background-size: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: -3px;
+  right: 5px;
+  cursor: pointer;
+}
+.wrapper table .toggle.collapse i {
+  background-image: url("../images/icon-arrow-up.svg");
+  background-repeat: no-repeat;
+}
+.wrapper table .toggle.expand i {
+  background-image: url("../images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+}
+.wrapper table .sum {
+  background-color: #dadada;
+}
+.wrapper table .sum td {
+  font-weight: bold;
+  color: #333;
+}
+.wrapper table .search-input {
+  border: 0;
+  padding: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.wrapper table .search-input:focus {
+  outline: none;
+}
+.wrapper table .round-button {
+  margin-right: 10px;
+}
+.wrapper table .status {
+  width: 15px;
+  height: 15px;
+  display: block;
+  background-size: 100%;
+}
+.wrapper table .status.st-open {
+  background-image: url("../images/status-open.svg");
+  background-repeat: no-repeat;
+}
+.wrapper table .status.st-close {
+  background-image: url("../images/status-close.svg");
+  background-repeat: no-repeat;
+}
+.wrapper table .status.st-lock {
+  background-image: url("../images/status-lock.svg");
+  background-repeat: no-repeat;
+}
+.wrapper table .status.st-suspend {
+  background-image: url("../images/status-suspend.svg");
+  background-repeat: no-repeat;
+}
 .wrapper .pure-left table {
   width: calc(100% - 10px);
+}
+
+.round-button {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  font-size: 11px;
+  text-align: center;
+  border: #edc23e 1px solid;
+  cursor: pointer;
+  vertical-align: middle;
+  box-sizing: border-box;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
 }
 
 .btn {
