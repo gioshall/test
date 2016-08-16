@@ -943,7 +943,8 @@ footer
 			color: #fff
 			background-color: #666
 			dd
-				color: #fff
+				color: #fff	
+
 	&.bid-odd
 		display: block
 		.trade-index
@@ -1153,7 +1154,7 @@ input
 			font-weight: bold
 			line-height: 33px
 			height: 33px
-			width: 50%
+			width: calc(100% / 3)
 			margin: 0
 			padding: 0
 			color: #d8a301
@@ -1277,6 +1278,13 @@ input
 					color: #4a90e2
 				@media screen and (max-width: 320px)
 					padding: 0 12px
+		#up-down
+			.lbtn
+				border: solid 1px #61ac1b
+				+linear-gradient(#7ed321,#61ac1b)
+			.rbtn
+				border: solid 1px #cc351f
+				+linear-gradient(#f54828,#cc351f)
 		#odd-even
 			.lbtn
 				border: solid 1px #3770ba

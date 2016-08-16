@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Binary</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<header>
+		<div class="logo"></div>
+		<div class="time-lang">
+			<div class="time">
+				Wed Jun 29 2016 12:16:16 GMT+0800 (CST)
+			</div>
+			<div class="lang-list">
+				中文
+				<span class="icon-arrow-down"></span>
+				<ul>
+					<li>English</li>
+					<li>ภาษาไทย</li>
+					<li>Việt</li>
+					<li>Khmer</li>
+					<li>한국어</li>
+				</ul>
+			</div>
+
+			<div class="btn">
+				登出
+			</div>
+		</div>
+	</header>
+
+	
+<!-- side menu -->
+<div class="side-menu"> 
+  <div class="main-block">
+  	<div class="user-pic">
+  		<img src="../images/user.jpg">
+  	</div>
+    <h2 class="account-name status-open">Ryoko Hirosue</h2>
+    <div class="cash">1,215,000.00<span class="currency">CNY</span></div>
+  </div>
+
+  <div class="qnav">
+  	<div class="gnav-item user notice-new"></div>
+  	<div class="gnav-item group"></div>
+  	<div class="gnav-item mail notice-new"></div>
+  </div>
+  <div class="menu-list">
+	  <ul>
+	  	<li>
+	  		<input type="checkbox" id="checkbox-01"/>
+			<label for="checkbox-01" class="dashboard ">我的资讯</label>
+	  	</li>
+	  	<li>
+			<input type="checkbox" id="checkbox-02"/>
+			<label for="checkbox-02" class="profile toggle">我的资讯</label>
+			<div class="content">
+			<ul>
+			  <li>我的帐号</li>
+			  <li>会员推广码</li>
+			</ul>
+			</div>
+	  	</li>
+	  	<li>
+			<input type="checkbox" id="checkbox-03"/>
+			<label for="checkbox-03" class="team toggle">下线管理</label>
+			<div class="content">
+			<ul>
+			  <li>新增下线</li>
+			  <li>下线列表</li>
+			</ul>
+			</div>
+	  	</li>
+	  	<li>
+	  		<input type="checkbox" id="checkbox-04"/>
+			<label for="checkbox-04" class="setting">设置</label>
+	  	</li>
+	  	<li>
+	  		<input type="checkbox" id="checkbox-05"/>
+			<label for="checkbox-05" class="market">即时注单</label>
+	  	</li>
+	  	<li>
+			<input type="checkbox" id="checkbox-06" checked/>
+			<label for="checkbox-06" class="report toggle">报表</label>
+			<div class="content">
+			<ul>
+			  <li>总账</li>
+			  <li>产品盈利分析</li>
+			</ul>
+			</div>
+	  	</li>
+	  	<li>
+			<input type="checkbox" id="checkbox-07"/>
+			<label for="checkbox-07" class="transfer toggle">转帐</label>
+			<div class="content">
+			<ul>
+			  <li>转帐</li>
+			  <li>转帐记录</li>
+			  <li>会员存提记录</li>
+			</ul>
+			</div>
+	  	</li>
+	  	<li>
+			<input type="checkbox" id="checkbox-08"/>
+			<label for="checkbox-08" class="log toggle">纪录</label>
+			<div class="content">
+			<ul>
+			  <li>异动记录</li>
+			</ul>
+			</div>
+	  	</li>
+	  </ul>
+  </div>
+
+  <div class="contact-qr">
+  	<h5>联络客服</h5>
+  	<img src="../images/qrcode.png">
+  </div>
+
+</div>
+
+
+<!-- content -->
+
+<div class="wrapper">
+	<h2>
+		下线帐目
+	</h2>
+	<div class="pure-g">
+		<div class="pure-u-1-1">
+			<table class="pure-table pure-table-bordered pure-table-striped">
+				<thead>
+					<tr class="table-head table-head-dgray">
+						<th colspan="13">
+						<div class="round-button ">
+							<i class="fa fa-plus" aria-hidden="true"></i>
+						</div>
+						<input type="text" class="search-input" placeholder="输入用户ID*">
+
+						<select>
+							<option>所有交易</option>
+						</select>
+						<input type="text" class="search-input" placeholder="11-09-2017">
+
+						到
+
+						<input type="text" class="search-input" placeholder="11-09-2017">
+
+						<div class="btn">
+							提交
+						</div>
+
+						<div class="btn date">
+							今日
+						</div>
+
+						<div class="btn date">
+							昨日
+						</div>
+
+						</th>
+					</tr>
+					<tr class="table-head table-head-white">
+						<th colspan="13">
+						<ul class="summary-list">
+							<li>交易量: <b>19,270.00</b></li>
+							<li>成交量: <b>19,270.00</b></li>
+							<li>盈亏: <b>19,270.00</b></li>
+							<li>返佣: <b>19,270.00</b></li>
+							<li>净盈亏: <b>19,270.00</b></li>
+							<li>交易笔数: <b>74</b></li>
+						</ul>
+	
+						</th>
+					</tr>
+					<tr>
+						<th rowspan="2">ID</th>
+						<th>产品</th>
+						<th rowspan="2">交易类型</th>
+						<th rowspan="2">种类</th>
+						<th rowspan="2">交易时间</th>
+						<th rowspan="2">投资额</th>
+						<th rowspan="2">交易价</th>
+						<th>投资盈亏</th>
+						<th rowspan="2">AG盈亏</th>
+						<th rowspan="2">MA盈亏</th>
+						<th rowspan="2">M盈亏</th>
+						<th rowspan="2">SM盈亏</th>
+						<th rowspan="2">HSE盈亏</th>
+					</tr>
+					<tr>
+						<th>货币</th>
+						<th>返佣</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>512749829</td>
+						<td>
+							<h3>外汇</h3>
+							美金/日圆
+						</td>
+						<td>
+							<h3>快速</h3>
+							60s
+						</td>
+						<td>
+							<span class="status-item status-item-down">跌</span>	
+						</td>
+						<td>
+							<h3>13:07:39</h3>
+							13:07:39 07-07-2016	
+						</td>
+						<td>
+							<h3>CNY</h3>
+							1,000.00 95%
+						</td>
+						<td>
+							<h3>1.29557</h3>
+							1.29573
+						</td>
+						<td>
+							<h3>950.00</h3>
+							10.00 (1.00%)
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+					</tr>
+					<tr>
+						<td>512749829</td>
+						<td>
+							<h3>外汇</h3>
+							美金/日圆
+						</td>
+						<td>
+							<h3>快速</h3>
+							60s
+						</td>
+						<td>
+							<span class="status-item status-item-odd">单</span>	
+						</td>
+						<td>
+							<h3>13:07:39</h3>
+							13:07:39 07-07-2016	
+						</td>
+						<td>
+							<h3>CNY</h3>
+							1,000.00 95%
+						</td>
+						<td>
+							<h3>1.29557</h3>
+							1.29573
+						</td>
+						<td>
+							<h3>950.00</h3>
+							10.00 (1.00%)
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+					</tr>
+					<tr>
+						<td>512749829</td>
+						<td>
+							<h3>外汇</h3>
+							美金/日圆
+						</td>
+						<td>
+							<h3>快速</h3>
+							60s
+						</td>
+						<td>
+							<span class="status-item status-item-up">涨</span>	
+						</td>
+						<td>
+							<h3>13:07:39</h3>
+							13:07:39 07-07-2016	
+						</td>
+						<td>
+							<h3>CNY</h3>
+							1,000.00 95%
+						</td>
+						<td>
+							<h3>1.29557</h3>
+							1.29573
+						</td>
+						<td>
+							<h3>950.00</h3>
+							10.00 (1.00%)
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+					</tr>
+					<tr>
+						<td>512749829</td>
+						<td>
+							<h3>外汇</h3>
+							美金/日圆
+						</td>
+						<td>
+							<h3>快速</h3>
+							60s
+						</td>
+						<td>
+							<span class="status-item status-item-odd">单</span>	
+						</td>
+						<td>
+							<h3>13:07:39</h3>
+							13:07:39 07-07-2016	
+						</td>
+						<td>
+							<h3>CNY</h3>
+							1,000.00 95%
+						</td>
+						<td>
+							<h3>1.29557</h3>
+							1.29573
+						</td>
+						<td>
+							<h3>950.00</h3>
+							10.00 (1.00%)
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+					</tr>
+					<tr>
+						<td>512749829</td>
+						<td>
+							<h3>外汇</h3>
+							美金/日圆
+						</td>
+						<td>
+							<h3>快速</h3>
+							60s
+						</td>
+						<td>
+							<span class="status-item status-item-up">涨</span>	
+						</td>
+						<td>
+							<h3>13:07:39</h3>
+							13:07:39 07-07-2016	
+						</td>
+						<td>
+							<h3>CNY</h3>
+							1,000.00 95%
+						</td>
+						<td>
+							<h3>1.29557</h3>
+							1.29573
+						</td>
+						<td>
+							<h3>950.00</h3>
+							10.00 (1.00%)
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+						<td>10% (1%)
+							-95.00 -0.10
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-1.7.1.js"></script>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

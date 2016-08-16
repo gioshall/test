@@ -330,9 +330,15 @@ header
 		width: 100%
 		background-color: #f8f8f8
 		font-size: 13px
+		line-height: 1.4
 		margin-top: 10px
 		td
 			height: 20px
+			h3
+				font-weight: bold
+		.text-red
+			color: $color-red
+			font-weight: bold
 
 		thead
 			.table-head
@@ -343,6 +349,34 @@ header
 				&.table-head-dgray
 					background-color: #5e5e5e
 					color: #efefef
+				&.table-head-white
+					background-color: #fff
+					color: $font-color
+				.btn
+					display: inline-block
+					height: 18px
+					line-height: 18px
+					width: 50px
+					font-size: 12px
+					margin: 0 3px
+					color: #4a4a4a
+					box-shadow: 0 0 0 #000
+					cursor: pointer	
+					+border-radius(3px)
+					&.date
+						background: transparent
+						color: #fff
+				.summary-list
+					li
+						display: inline-block
+						margin-right: 15px
+						line-height: 35px
+						b
+							font-weight: bold
+							color: $darker-color
+			th
+				border-bottom: 1px solid #bebebe
+				white-space: nowrap
 		tbody
 			th
 				font-weight: bold
@@ -350,6 +384,20 @@ header
 			tr
 				td:nth-of-type(2)
 					color: $darker-color
+		.show-htable.show
+			background-color: #999
+		.show-htable table
+			position: absolute
+			margin-top: -20px
+			margin-left: 20px
+			width: auto !important
+			display: none
+			//+transform(scale(0))
+			box-shadow: 0 2px 5px rgba(50,50,50,0.4)
+		// .show-htable.show table
+		// 	//display: block
+		// 	+transform(scale(1))
+			
 		.level
 			font-size: 11px
 			width: 30px
@@ -420,7 +468,12 @@ header
 			td
 				font-weight: bold
 				color: #333
-
+		hr
+			width: 15px
+			display: inline-block
+			opacity: 0
+			margin: 0
+			padding: 0
 		.search-input
 			border: 0
 			padding: 2px
@@ -429,8 +482,6 @@ header
 			+border-radius(2px)
 			&:focus
 				outline: none
-		.round-button
-			margin-right: 10px
 				
 		.status
 			width: 15px
@@ -494,9 +545,6 @@ header
 		border: solid 1px #c8a43f
 		outline: none
 
-
-
-
 .slider
 	position: absolute
 	cursor: pointer
@@ -530,6 +578,39 @@ input
 	&:checked + .slider:before
 		+transform(translateX(12px))
 	
+.status-item
+	height: 20px
+	width: 20px
+	line-height: 20px
+	display: inline-block
+	color: #d8d8d8
+	border: 1px solid #d8d8d8
+	+border-radius(3px)
+	text-align: center
+	&.status-item-up
+		color: #7ed321
+		border-color: #7ed321
+
+	&.status-item-down
+		color: #f54828
+		border-color: #f54828
+
+	&.status-item-odd
+		color: #4a90e2
+		border-color: #4a90e2
+
+	&.status-item-even
+		color: #f89b36
+		border-color: #f89b36
+
+	&.status-item-big
+		color: #a36ed2
+		border-color: #a36ed2
+
+	&.status-item-small
+		color: #fccf4a
+		border-color: #fccf4a
+
 .qr-code
 	width: 280px
 	position: absolute

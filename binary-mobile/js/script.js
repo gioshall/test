@@ -42,16 +42,21 @@ $('.menu-list input[type="checkbox"]').on('change', function() {
     $('#bid-overlay').addClass(ovlStyle)
   });
 
-
+  $('#tab01').click(function(){
+    $('.bid-btn').hide();
+    $('#up-down').show();    
+    $('.bid-tab li').removeClass('active');
+    $(this).addClass('active');
+  });
   $('#tab02').click(function(){
-    $('#odd-even').show();
-    $('#big-small').hide();
+    $('.bid-btn').hide();
+    $('#odd-even').show();  
     $('.bid-tab li').removeClass('active');
     $(this).addClass('active');
   });
   $('#tab03').click(function(){
+    $('.bid-btn').hide();
     $('#big-small').show();
-    $('#odd-even').hide();
     $('.bid-tab li').removeClass('active');
     $(this).addClass('active');
   });

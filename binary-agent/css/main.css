@@ -1347,10 +1347,18 @@ header .time-lang .btn {
   width: 100%;
   background-color: #f8f8f8;
   font-size: 13px;
+  line-height: 1.4;
   margin-top: 10px;
 }
 .wrapper table td {
   height: 20px;
+}
+.wrapper table td h3 {
+  font-weight: bold;
+}
+.wrapper table .text-red {
+  color: #d0021b;
+  font-weight: bold;
 }
 .wrapper table thead .table-head {
   color: #4a4a4a;
@@ -1363,11 +1371,57 @@ header .time-lang .btn {
   background-color: #5e5e5e;
   color: #efefef;
 }
+.wrapper table thead .table-head.table-head-white {
+  background-color: #fff;
+  color: #5e5e5e;
+}
+.wrapper table thead .table-head .btn {
+  display: inline-block;
+  height: 18px;
+  line-height: 18px;
+  width: 50px;
+  font-size: 12px;
+  margin: 0 3px;
+  color: #4a4a4a;
+  box-shadow: 0 0 0 #000;
+  cursor: pointer;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.wrapper table thead .table-head .btn.date {
+  background: transparent;
+  color: #fff;
+}
+.wrapper table thead .table-head .summary-list li {
+  display: inline-block;
+  margin-right: 15px;
+  line-height: 35px;
+}
+.wrapper table thead .table-head .summary-list li b {
+  font-weight: bold;
+  color: #d8a301;
+}
+.wrapper table thead th {
+  border-bottom: 1px solid #bebebe;
+  white-space: nowrap;
+}
 .wrapper table tbody th {
   font-weight: bold;
 }
 .wrapper table.table-announce tr td:nth-of-type(2) {
   color: #d8a301;
+}
+.wrapper table .show-htable.show {
+  background-color: #999;
+}
+.wrapper table .show-htable table {
+  position: absolute;
+  margin-top: -20px;
+  margin-left: 20px;
+  width: auto !important;
+  display: none;
+  box-shadow: 0 2px 5px rgba(50, 50, 50, 0.4);
 }
 .wrapper table .level {
   font-size: 11px;
@@ -1463,6 +1517,13 @@ header .time-lang .btn {
   font-weight: bold;
   color: #333;
 }
+.wrapper table hr {
+  width: 15px;
+  display: inline-block;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+}
 .wrapper table .search-input {
   border: 0;
   padding: 2px;
@@ -1474,9 +1535,6 @@ header .time-lang .btn {
 }
 .wrapper table .search-input:focus {
   outline: none;
-}
-.wrapper table .round-button {
-  margin-right: 10px;
 }
 .wrapper table .status {
   width: 15px;
@@ -1608,6 +1666,43 @@ input:checked + .slider:before {
   -ms-transform: translateX(12px);
   -webkit-transform: translateX(12px);
   transform: translateX(12px);
+}
+
+.status-item {
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  display: inline-block;
+  color: #d8d8d8;
+  border: 1px solid #d8d8d8;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+}
+.status-item.status-item-up {
+  color: #7ed321;
+  border-color: #7ed321;
+}
+.status-item.status-item-down {
+  color: #f54828;
+  border-color: #f54828;
+}
+.status-item.status-item-odd {
+  color: #4a90e2;
+  border-color: #4a90e2;
+}
+.status-item.status-item-even {
+  color: #f89b36;
+  border-color: #f89b36;
+}
+.status-item.status-item-big {
+  color: #a36ed2;
+  border-color: #a36ed2;
+}
+.status-item.status-item-small {
+  color: #fccf4a;
+  border-color: #fccf4a;
 }
 
 .qr-code {
