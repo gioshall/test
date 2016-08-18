@@ -4,6 +4,11 @@ body {
   position: relative;
 }
 body.active .wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   -moz-transform: translateX(280px);
   -ms-transform: translateX(280px);
   -webkit-transform: translateX(280px);
@@ -22,6 +27,9 @@ body.active .wrapper header:before {
   left: 0;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 50;
+}
+body.active .wrapper .second-bar {
+  z-index: 0;
 }
 body.active .side-menu {
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.5);
@@ -136,10 +144,6 @@ body.login .login-form .remember input[type=checkbox] {
   left: 0;
   width: 100vw;
   height: 100vh;
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
   -moz-transition: 0.2s;
   -o-transition: 0.2s;
   -webkit-transition: 0.2s;
@@ -374,22 +378,22 @@ header div.refresh {
   background-image: url("../images/icon-sclose.svg");
   background-repeat: no-repeat;
 }
-.list-head .list-item .price-up,
-.list-head .list-item .price-down,
-.list-content .list-item .price-up,
-.list-content .list-item .price-down {
+.list-head .list-item .price-call,
+.list-head .list-item .price-put,
+.list-content .list-item .price-call,
+.list-content .list-item .price-put {
   font-size: 15px;
   font-weight: bold;
   padding: 2px 3px;
   border-radius: 5px;
 }
-.list-head .list-item .price-up,
-.list-content .list-item .price-up {
+.list-head .list-item .price-call,
+.list-content .list-item .price-call {
   color: #f54828;
   border: 2px #f54828 solid;
 }
-.list-head .list-item .price-down,
-.list-content .list-item .price-down {
+.list-head .list-item .price-put,
+.list-content .list-item .price-put {
   color: #7ed321;
   border: 2px #7ed321 solid;
 }
@@ -1009,6 +1013,11 @@ header div.refresh {
   border-color: #fccf4a;
 }
 
+.status-item-tie {
+  color: #999;
+  border-color: #999;
+}
+
 .price-tag-wrapper {
   padding: 10px 15px;
   display: flex;
@@ -1048,8 +1057,12 @@ header div.refresh {
   border: 1px solid #9b9b9b;
 }
 
-.trading-price-up {
+.trading-price-call {
   color: #7ed321;
+}
+
+.trading-price-put {
+  color: #f54828;
 }
 
 .trading-price-even {
@@ -1096,15 +1109,16 @@ header div.refresh {
   background-image: url("../images/icon_green.svg");
   background-repeat: no-repeat;
 }
-.timer.time-is-up, .timer.icon-even,
+.timer.time-is-up, .timer.icon-even, .timer.icon-tie,
 .icon-winlose.time-is-up,
-.icon-winlose.icon-even {
+.icon-winlose.icon-even,
+.icon-winlose.icon-tie {
   background-image: url("../images/icon_gray.svg");
   background-repeat: no-repeat;
 }
 
 footer {
-  height: 123px;
+  height: 100px;
   color: #4a4a4a;
   background-color: #e9e9e9;
   font-size: 13px;
@@ -1124,7 +1138,7 @@ footer {
   justify-content: space-between;
   margin-bottom: 8px;
 }
-.footer-item:nth-child(3) {
+.footer-item:nth-child(2) {
   border-bottom: 1px dashed #9b9b9b;
   padding-bottom: 8px;
 }
@@ -1278,6 +1292,24 @@ footer {
 }
 #bid-overlay .trade-index #confirmOrderType dd {
   color: #fff;
+}
+#bid-overlay.bid-call {
+  display: block;
+}
+#bid-overlay.bid-call .trade-index {
+  border: solid 1px #61ac1b;
+}
+#bid-overlay.bid-call .trade-index #confirmOrderType {
+  background-color: #7ed321;
+}
+#bid-overlay.bid-put {
+  display: block;
+}
+#bid-overlay.bid-put .trade-index {
+  border: solid 1px #cc351f;
+}
+#bid-overlay.bid-put .trade-index #confirmOrderType {
+  background-color: #f54828;
 }
 #bid-overlay.bid-odd {
   display: block;
@@ -1725,7 +1757,7 @@ input:checked + .slider:before {
     padding: 0 12px;
   }
 }
-.transaction .bid-area #up-down .lbtn {
+.transaction .bid-area #call-put .lbtn {
   border: solid 1px #61ac1b;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#7ed321), to(#61ac1b));
   background-image: -webkit-linear-gradient(top, #7ed321, #61ac1b);
@@ -1735,7 +1767,7 @@ input:checked + .slider:before {
   background-image: linear-gradient(to bottom, #7ed321, #61ac1b);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#7ed321', EndColorStr='#61ac1b');
 }
-.transaction .bid-area #up-down .rbtn {
+.transaction .bid-area #call-put .rbtn {
   border: solid 1px #cc351f;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f54828), to(#cc351f));
   background-image: -webkit-linear-gradient(top, #f54828, #cc351f);

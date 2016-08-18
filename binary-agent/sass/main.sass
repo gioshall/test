@@ -190,6 +190,8 @@ header
 				+bg(icon-setting,svg)
 			&.sale
 				+bg(icon-sale,svg)
+			&.instant
+				+bg(icon-instant,svg)
 			&.logout
 				+bg(icon-logout,svg)
 			&.log
@@ -221,6 +223,8 @@ header
 				+bg(icon-setting-on,svg)
 			&.sale
 				+bg(icon-sale-on,svg)
+			&.instant
+				+bg(icon-instant-on,svg)
 			&.logout
 				+bg(icon-logout-on,svg)
 			&.log
@@ -339,7 +343,8 @@ header
 		.text-red
 			color: $color-red
 			font-weight: bold
-
+		.align-right
+			text-align: right !important
 		thead
 			.table-head
 				color: #4a4a4a
@@ -384,14 +389,20 @@ header
 			tr
 				td:nth-of-type(2)
 					color: $darker-color
-		.show-htable.show
-			background-color: #999
+		// .show-htable i
+		// 	+transition(0.2s)
+		// .show-htable.show
+		// 	background-color: $darker-color
+		// 	i
+		// 		color: #FFF
+		// 		+transform(rotate(45deg))
 		.show-htable table
 			position: absolute
 			margin-top: -20px
 			margin-left: 20px
 			width: auto !important
 			display: none
+			
 			//+transform(scale(0))
 			box-shadow: 0 2px 5px rgba(50,50,50,0.4)
 		// .show-htable.show table
@@ -500,6 +511,21 @@ header
 	.pure-left
 		table
 			width: calc(100% - 10px)
+
+.hotkey
+	width: 18px
+	height: 18px
+	display: inline-block
+	background-size: 100%
+	cursor: pointer
+	&.hk-info
+		+bg(icon-info,png)
+	&.hk-percent
+		+bg(icon-percent,svg)
+	&.hk-receipt
+		+bg(icon-receipt,png)	
+	&.hk-trans
+		+bg(icon-trans,png)
 
 .round-button
 	display: inline-block

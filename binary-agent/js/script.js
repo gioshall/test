@@ -3,13 +3,15 @@ $('.menu-list input[type="checkbox"]').on('change', function() {
 });
 
 
-$('.show-htable').hover(function(){
+$('.show-htable').mouseenter(function(){
   $('.show-htable table').hide();
   $(this).find('table').show();
 });
 
+// $('.show-htable table').mouseleave(function(){
+//   $(this).hide();
+// });
 
-$('.show-htable table').mouseleave(function(){
-  $(this).hide()
-});
-
+$(document).click(function(){
+  $('.show-htable table').hide()
+})

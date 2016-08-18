@@ -1148,6 +1148,10 @@ header .time-lang .btn {
   background-image: url("../images/icon-sale.svg");
   background-repeat: no-repeat;
 }
+.menu-list ul label.instant {
+  background-image: url("../images/icon-instant.svg");
+  background-repeat: no-repeat;
+}
 .menu-list ul label.logout {
   background-image: url("../images/icon-logout.svg");
   background-repeat: no-repeat;
@@ -1202,6 +1206,10 @@ header .time-lang .btn {
 }
 .menu-list ul [type=checkbox]:checked ~ label.sale {
   background-image: url("../images/icon-sale-on.svg");
+  background-repeat: no-repeat;
+}
+.menu-list ul [type=checkbox]:checked ~ label.instant {
+  background-image: url("../images/icon-instant-on.svg");
   background-repeat: no-repeat;
 }
 .menu-list ul [type=checkbox]:checked ~ label.logout {
@@ -1360,6 +1368,9 @@ header .time-lang .btn {
   color: #d0021b;
   font-weight: bold;
 }
+.wrapper table .align-right {
+  text-align: right !important;
+}
 .wrapper table thead .table-head {
   color: #4a4a4a;
   font-weight: bold;
@@ -1411,9 +1422,6 @@ header .time-lang .btn {
 }
 .wrapper table.table-announce tr td:nth-of-type(2) {
   color: #d8a301;
-}
-.wrapper table .show-htable.show {
-  background-color: #999;
 }
 .wrapper table .show-htable table {
   position: absolute;
@@ -1560,6 +1568,30 @@ header .time-lang .btn {
 }
 .wrapper .pure-left table {
   width: calc(100% - 10px);
+}
+
+.hotkey {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-size: 100%;
+  cursor: pointer;
+}
+.hotkey.hk-info {
+  background-image: url("../images/icon-info.png");
+  background-repeat: no-repeat;
+}
+.hotkey.hk-percent {
+  background-image: url("../images/icon-percent.svg");
+  background-repeat: no-repeat;
+}
+.hotkey.hk-receipt {
+  background-image: url("../images/icon-receipt.png");
+  background-repeat: no-repeat;
+}
+.hotkey.hk-trans {
+  background-image: url("../images/icon-trans.png");
+  background-repeat: no-repeat;
 }
 
 .round-button {

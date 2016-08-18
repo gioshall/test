@@ -44,7 +44,7 @@ $('.menu-list input[type="checkbox"]').on('change', function() {
 
   $('#tab01').click(function(){
     $('.bid-btn').hide();
-    $('#up-down').show();    
+    $('#call-put').show();    
     $('.bid-tab li').removeClass('active');
     $(this).addClass('active');
   });
