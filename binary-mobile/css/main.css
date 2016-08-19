@@ -97,11 +97,11 @@ body.login .login-form .logon-input input[type=password] {
   -webkit-appearance: none;
 }
 body.login .login-form .logon-input input[name=username] {
-  background-image: url("../images/icon_profile.svg");
+  background-image: url("../images/icon-profile.svg");
   background-repeat: no-repeat;
 }
 body.login .login-form .logon-input input[name=pass] {
-  background-image: url("../images/icon_password.png");
+  background-image: url("../images/icon-password.png");
   background-repeat: no-repeat;
 }
 body.login .login-form .logon-input input[name=repass] {
@@ -439,6 +439,55 @@ header div.refresh {
 .list-content:nth-child(odd) {
   background-color: #efefef;
 }
+.list-content .list-move {
+  width: 22px;
+  text-indent: 0;
+  cursor: move;
+  padding: 0;
+  margin-left: -5px;
+  display: none;
+}
+
+.btn-move {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  background-size: 100%;
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  cursor: pointer;
+}
+.btn-move .move-sort,
+.btn-move .move-complete {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: 100%;
+  top: 0;
+  left: 0;
+}
+.btn-move .move-sort {
+  background-image: url("../images/icon-sort.svg");
+  background-repeat: no-repeat;
+}
+.btn-move .move-complete {
+  display: none;
+  top: 0;
+  left: 0;
+  background-image: url("../images/icon-completed-gold.svg");
+  background-repeat: no-repeat;
+}
+.btn-move.complete .move-sort {
+  display: none;
+}
+.btn-move.complete .move-complete {
+  display: block;
+}
+
+#sortable .list-move {
+  display: block;
+}
 
 .card-list {
   margin-top: 107px;
@@ -504,7 +553,7 @@ header div.refresh {
   box-sizing: border-box;
   padding-bottom: 8px;
   background-color: #eceef0;
-  background-image: url("../images/icon-stack-3x.png");
+  background-image: url("../images/icon-stack.png");
   background-repeat: no-repeat;
   background-repeat: no-repeat;
   background-size: 100% 13px;
@@ -1097,7 +1146,7 @@ header div.refresh {
   width: 34px;
   line-height: 34px;
   text-align: center;
-  background-image: url("../images/icon_red.svg");
+  background-image: url("../images/icon-red.svg");
   background-repeat: no-repeat;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1106,14 +1155,14 @@ header div.refresh {
 }
 .timer.icon-lose,
 .icon-winlose.icon-lose {
-  background-image: url("../images/icon_green.svg");
+  background-image: url("../images/icon-green.svg");
   background-repeat: no-repeat;
 }
 .timer.time-is-up, .timer.icon-even, .timer.icon-tie,
 .icon-winlose.time-is-up,
 .icon-winlose.icon-even,
 .icon-winlose.icon-tie {
-  background-image: url("../images/icon_gray.svg");
+  background-image: url("../images/icon-gray.svg");
   background-repeat: no-repeat;
 }
 

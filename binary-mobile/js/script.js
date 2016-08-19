@@ -31,6 +31,21 @@ $('.menu-list input[type="checkbox"]').on('change', function() {
 	$('.menu-list input[type="checkbox"]').not(this).prop('checked', false);
 });
 
+// fav sort
+  $('.move-sort').click(function(){
+    $('.btn-move').addClass('complete');
+    $('.fav-sort').attr('id','sortable');
+    $( '#sortable' ).sortable();
+    $( '#sortable' ).disableSelection();
+  });
+
+  $('.move-complete').click(function(){
+    $('.btn-move').removeClass('complete');
+    $( '#sortable' ).sortable('desable');
+    //$( '#sortable' ).disableSelection();
+  });
+
+
 // transaction
 
   function bidOverlay() {

@@ -81,9 +81,9 @@ body
 					text-indent: 35px
 					-webkit-appearance: none
 				input[name=username]
-					+bg(icon_profile,svg)
+					+bg(icon-profile,svg)
 				input[name=pass]
-					+bg(icon_password,png)
+					+bg(icon-password,png)
 				input[name=repass]
 					+bg(icon-shield,svg)
 				input[name=phone]
@@ -322,7 +322,48 @@ header
 
 	&:nth-child(odd)
 		background-color: #efefef
+	.list-move
+		width: 22px
+		text-indent: 0
+		cursor: move
+		padding: 0
+		margin-left: -5px
+		display: none
 
+.btn-move
+	width: 25px
+	height: 25px
+	display: inline-block
+	background-size: 100%
+	position: absolute
+	right: 10px
+	top: 12px
+	cursor: pointer
+	.move-sort,
+	.move-complete
+		width: 100%
+		height: 100%
+		position: absolute
+		background-size: 100%
+		top: 0
+		left: 0
+	.move-sort
+		+bg(icon-sort,svg)
+	.move-complete
+		display: none
+		top: 0
+		left: 0	
+		+bg(icon-completed-gold,svg)
+	&.complete
+		.move-sort
+			display: none
+		.move-complete
+			display: block
+
+
+#sortable
+	.list-move
+		display: block
 
 .card-list
 	margin-top: 107px
@@ -378,7 +419,7 @@ header
 	box-sizing: border-box
 	padding-bottom: 8px
 	background-color: #eceef0
-	+bg(icon-stack-3x,png)
+	+bg(icon-stack,png)
 	background-repeat: no-repeat
 	background-size: 100% 13px
 	background-position-y: bottom
@@ -816,17 +857,17 @@ header
 	width: 34px
 	line-height: 34px
 	text-align: center
-	+bg(icon_red,svg)
+	+bg(icon-red,svg)
 	background-repeat: no-repeat
 	background-size: contain
 	background-position: center
 	color: #fff
 	&.icon-lose
-		+bg(icon_green,svg)
+		+bg(icon-green,svg)
 	&.time-is-up,
 	&.icon-even,
 	&.icon-tie
-		+bg(icon_gray,svg)
+		+bg(icon-gray,svg)
 
 
 footer
