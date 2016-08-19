@@ -32,17 +32,21 @@ $('.menu-list input[type="checkbox"]').on('change', function() {
 });
 
 // fav sort
-  $('.move-sort').click(function(){
-    $('.btn-move').addClass('complete');
+function sortableEnable() {
     $('.fav-sort').attr('id','sortable');
-    $( '#sortable' ).sortable();
-    $( '#sortable' ).disableSelection();
-  });
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).sortable( "option", "disabled", false );
+    $( "#sortable" ).disableSelection();
+    return false;
+  }
+  function sortableDisable() {
+    $( "#sortable" ).sortable("disable");    
+    $('.fav-sort').attr('id','');
+    return false;
+  }
 
-  $('.move-complete').click(function(){
-    $('.btn-move').removeClass('complete');
-    $( '#sortable' ).sortable('desable');
-    //$( '#sortable' ).disableSelection();
+  $('.btn-move').click(function(){
+    $(this).toggleClass('complete');
   });
 
 
