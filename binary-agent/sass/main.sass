@@ -343,6 +343,9 @@ header
 		.text-red
 			color: $color-red
 			font-weight: bold
+		.text-green
+			color: $color-green
+			font-weight: bold
 		.align-right
 			text-align: right !important
 		thead
@@ -389,26 +392,36 @@ header
 			tr
 				td:nth-of-type(2)
 					color: $darker-color
-		// .show-htable i
-		// 	+transition(0.2s)
-		// .show-htable.show
-		// 	background-color: $darker-color
-		// 	i
-		// 		color: #FFF
-		// 		+transform(rotate(45deg))
 		.show-htable table
 			position: absolute
 			margin-top: -20px
 			margin-left: 20px
 			width: auto !important
 			display: none
-			
-			//+transform(scale(0))
 			box-shadow: 0 2px 5px rgba(50,50,50,0.4)
-		// .show-htable.show table
-		// 	//display: block
-		// 	+transform(scale(1))
-			
+
+		.toggle-list
+			.arrow
+				width: 15px
+				height: 15px
+				display: block
+				margin: auto
+				background-position: center
+				background-size: 100% auto
+				+bg(icon-arrow-down,svg)
+			+ tbody
+				position: absolute
+				height: 0
+				overflow: hidden
+		.toggle-list.open
+			.arrow
+				+bg(icon-arrow-up,svg)
+			+ tbody
+				position: relative
+				border-bottom: 1px solid #bebebe
+
+
+
 		.level
 			font-size: 11px
 			width: 30px
@@ -636,6 +649,41 @@ input
 	&.status-item-small
 		color: #fccf4a
 		border-color: #fccf4a
+
+.page-info
+	font-size: 13px
+	line-height: 20px
+	margin: 10px 0
+	.pagenation
+		text-align: right
+
+.pagenation
+	li
+		display: inline-block
+		margin: 2px
+		a
+			color: $font-color
+			text-decoration: none
+			display: block
+			font-size: 15px
+			&:hover
+				color: $primary-color
+			&.current
+				color: $primary-color
+				font-weight: bold
+		.step
+			border: 1px #5e5e5e solid
+			box-sizing: border-box
+			line-height: 19px
+			width: 20px
+			padding: 0
+			text-align: center
+			font-size: 11px
+			+border-radius(50%)
+			&:hover
+				border: 1px solid $primary-color
+
+
 
 .qr-code
 	width: 280px

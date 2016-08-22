@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Binary</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<header>
+		<div class="logo"></div>
+		<div class="time-lang">
+			<div class="time">
+				Wed Jun 29 2016 12:16:16 GMT+0800 (CST)
+			</div>
+			<div class="lang-list">
+				中文
+				<span class="icon-arrow-down"></span>
+				<ul>
+					<li>English</li>
+					<li>ภาษาไทย</li>
+					<li>Việt</li>
+					<li>Khmer</li>
+					<li>한국어</li>
+				</ul>
+			</div>
+
+			<div class="btn">
+				登出
+			</div>
+		</div>
+	</header>
+
+	
+<!-- side menu -->
+<div class="side-menu"> 
+  <div class="main-block">
+  	<div class="user-pic">
+  		<img src="../images/user.jpg">
+  	</div>
+    <h2 class="account-name status-open">Ryoko Hirosue</h2>
+    <div class="cash">1,215,000.00<span class="currency">CNY</span></div>
+  </div>
+
+  <div class="qnav">
+  	<div class="gnav-item user notice-new"></div>
+  	<div class="gnav-item group"></div>
+  	<div class="gnav-item mail notice-new"></div>
+  </div>
+  <div class="menu-list">
+	  <ul>
+	  	<li>
+	  		<input type="checkbox" id="checkbox-01"/>
+			<label for="checkbox-01" class="dashboard ">我的资讯</label>
+	  	</li>
+	  	<li>
+			<input type="checkbox" id="checkbox-02"/>
+			<label for="checkbox-02" class="profile toggle">我的资讯</label>
+			<div class="content">
+			<ul>
+			  <li>我的帐号</li>
+			  <li>会员推广码</li>
+			</ul>
+			</div>
+	  	</li>
+	  	<li>
+			<input type="checkbox" id="checkbox-03"/>
+			<label for="checkbox-03" class="team toggle">下线管理</label>
+			<div class="content">
+			<ul>
+			  <li>新增下线</li>
+			  <li>下线列表</li>
+			</ul>
+			</div>
+	  	</li>
+	  	<li>
+	  		<input type="checkbox" id="checkbox-04"/>
+			<label for="checkbox-04" class="setting">设置</label>
+	  	</li>
+	  	<li>
+	  		<input type="checkbox" id="checkbox-05" checked/>
+			<label for="checkbox-05" class="instant" >即时注单</label>
+	  	</li>
+	  	<li>
+			<input type="checkbox" id="checkbox-06" />
+			<label for="checkbox-06" class="report toggle">报表</label>
+			<div class="content">
+			<ul>
+			  <li>总账</li>
+			  <li>产品盈利分析</li>
+			</ul>
+			</div>
+	  	</li>
+	  	<li>
+			<input type="checkbox" id="checkbox-07"/>
+			<label for="checkbox-07" class="transfer toggle">转帐</label>
+			<div class="content">
+			<ul>
+			  <li>转帐</li>
+			  <li>转帐记录</li>
+			  <li>会员存提记录</li>
+			</ul>
+			</div>
+	  	</li>
+	  	<li>
+			<input type="checkbox" id="checkbox-08"/>
+			<label for="checkbox-08" class="log">异动记录</label>
+	  	</li>
+	  </ul>
+  </div>
+
+  <div class="contact-qr">
+  	<h5>联络客服</h5>
+  	<img src="../images/qrcode.png">
+  </div>
+
+</div>
+
+
+<!-- content -->
+
+<div class="wrapper">
+	<h2>
+		即时注单
+	</h2>
+	<div class="pure-g">
+		<div class="pure-u-1-1">
+			<table class="pure-table pure-table-bordered pure-table-striped">
+				<thead>
+					<tr>
+						<th></th>
+						<th>资产</th>
+						<th>ID</th>
+						<th>用戶名</th>
+						<th>涨跌</th>
+						<th>单双</th>
+						<th>大小</th>
+						<th class="align-right">投资金额</th>
+						<th class="align-right">收益比率</th>
+						<th class="align-right">盈亏</th>
+						<th class="align-right">我的盈亏</th>
+						<th class="align-right">到期时间</th>
+					</tr>
+				</thead>
+				<thead class="toggle-list">
+					<tr class="table-head table-head-white ">
+						<th><span class="arrow"></span></th>
+						<th>美金/日圆 (3)</th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>512749829</td>
+						<td>demouse001</td>
+						<td>
+							<span class="status-item status-item-down">跌</span>	
+						</td>
+						<td></td>
+						<td></td>
+						<td class="align-right">
+							$200.00
+						</td>
+						<td class="align-right">
+							0.92
+						</td>
+						<td class="align-right text-red">
+							18.00
+						</td>
+						<td class="align-right text-green">
+							-95.00 
+						</td>
+						<td class="align-right">
+							120
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>512749829</td>
+						<td>demouse001</td>
+						<td>	
+						</td>
+						<td></td>
+						<td>
+							<span class="status-item status-item-big">大</span>
+						</td>
+						<td class="align-right">
+							$200.00
+						</td>
+						<td class="align-right">
+							0.92
+						</td>
+						<td class="align-right text-red">
+							18.00
+						</td>
+						<td class="align-right text-green">
+							-95.00 
+						</td>
+						<td class="align-right">
+							120
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>512749829</td>
+						<td>demouse001</td>
+						<td>
+						</td>
+						<td>
+							<span class="status-item status-item-odd">单</span>
+						</td>
+						<td></td>
+						<td class="align-right">
+							$200.00
+						</td>
+						<td class="align-right">
+							0.92
+						</td>
+						<td class="align-right text-red">
+							18.00
+						</td>
+						<td class="align-right text-green">
+							-95.00 
+						</td>
+						<td class="align-right">
+							120
+						</td>
+					</tr>
+				</tbody>
+				<thead class="toggle-list">
+					<tr class="table-head table-head-white ">
+						<th><span class="arrow"></span></th>
+						<th>美金/加币 (2)</th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>512749829</td>
+						<td>demouse001</td>
+						<td>
+						</td>
+						<td>
+							<span class="status-item status-item-even">双</span>	
+						</td>
+						<td></td>
+						<td class="align-right">
+							$200.00
+						</td>
+						<td class="align-right">
+							0.92
+						</td>
+						<td class="align-right text-red">
+							18.00
+						</td>
+						<td class="align-right text-green">
+							-95.00 
+						</td>
+						<td class="align-right">
+							120
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>512749829</td>
+						<td>demouse001</td>
+						<td>
+							<span class="status-item status-item-down">跌</span>	
+						</td>
+						<td></td>
+						<td></td>
+						<td class="align-right">
+							$200.00
+						</td>
+						<td class="align-right">
+							0.92
+						</td>
+						<td class="align-right text-red">
+							18.00
+						</td>
+						<td class="align-right text-green">
+							-95.00 
+						</td>
+						<td class="align-right">
+							120
+						</td>
+					</tr>
+				</tbody>
+				<thead class="toggle-list">
+					<tr class="table-head table-head-white ">
+						<th><span class="arrow"></span></th>
+						<th>美金/欧元 (2)</th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>512749829</td>
+						<td>demouse001</td>
+						<td>	
+						</td>
+						<td></td>
+						<td>
+							<span class="status-item status-item-small">小</span>
+						</td>
+						<td class="align-right">
+							$200.00
+						</td>
+						<td class="align-right">
+							0.92
+						</td>
+						<td class="align-right text-red">
+							18.00
+						</td>
+						<td class="align-right text-green">
+							-95.00 
+						</td>
+						<td class="align-right">
+							120
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>512749829</td>
+						<td>demouse001</td>
+						<td>
+							<span class="status-item status-item-down">跌</span>	
+						</td>
+						<td></td>
+						<td></td>
+						<td class="align-right">
+							$200.00
+						</td>
+						<td class="align-right">
+							0.92
+						</td>
+						<td class="align-right text-red">
+							18.00
+						</td>
+						<td class="align-right text-green">
+							-95.00 
+						</td>
+						<td class="align-right">
+							120
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-1.7.1.js"></script>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

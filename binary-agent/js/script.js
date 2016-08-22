@@ -15,3 +15,8 @@ $('.show-htable').mouseenter(function(){
 $(document).click(function(){
   $('.show-htable table').hide()
 })
+
+
+$('.toggle-list').click(function(){
+  $(this).toggleClass('open')
+})

@@ -1368,6 +1368,10 @@ header .time-lang .btn {
   color: #d0021b;
   font-weight: bold;
 }
+.wrapper table .text-green {
+  color: #30944d;
+  font-weight: bold;
+}
 .wrapper table .align-right {
   text-align: right !important;
 }
@@ -1430,6 +1434,29 @@ header .time-lang .btn {
   width: auto !important;
   display: none;
   box-shadow: 0 2px 5px rgba(50, 50, 50, 0.4);
+}
+.wrapper table .toggle-list .arrow {
+  width: 15px;
+  height: 15px;
+  display: block;
+  margin: auto;
+  background-position: center;
+  background-size: 100% auto;
+  background-image: url("../images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+}
+.wrapper table .toggle-list + tbody {
+  position: absolute;
+  height: 0;
+  overflow: hidden;
+}
+.wrapper table .toggle-list.open .arrow {
+  background-image: url("../images/icon-arrow-up.svg");
+  background-repeat: no-repeat;
+}
+.wrapper table .toggle-list.open + tbody {
+  position: relative;
+  border-bottom: 1px solid #bebebe;
 }
 .wrapper table .level {
   font-size: 11px;
@@ -1735,6 +1762,48 @@ input:checked + .slider:before {
 .status-item.status-item-small {
   color: #fccf4a;
   border-color: #fccf4a;
+}
+
+.page-info {
+  font-size: 13px;
+  line-height: 20px;
+  margin: 10px 0;
+}
+.page-info .pagenation {
+  text-align: right;
+}
+
+.pagenation li {
+  display: inline-block;
+  margin: 2px;
+}
+.pagenation li a {
+  color: #5e5e5e;
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+}
+.pagenation li a:hover {
+  color: #edc23e;
+}
+.pagenation li a.current {
+  color: #edc23e;
+  font-weight: bold;
+}
+.pagenation li .step {
+  border: 1px #5e5e5e solid;
+  box-sizing: border-box;
+  line-height: 19px;
+  width: 20px;
+  padding: 0;
+  text-align: center;
+  font-size: 11px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.pagenation li .step:hover {
+  border: 1px solid #edc23e;
 }
 
 .qr-code {
