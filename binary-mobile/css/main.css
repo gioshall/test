@@ -5,7 +5,6 @@ html.active {
 }
 html.active body {
   position: fixed;
-  overflow-x: hidden;
 }
 html.active body .wrapper {
   position: absolute;
