@@ -4,9 +4,12 @@
 html.active
 	overflow-x: hidden
 	overflow-y: scroll
+	-webkit-overflow-scrolling: touch;
 	body
 		position: fixed
 		overflow-x: hidden
+		overflow-y: scroll
+		-webkit-overflow-scrolling: touch;
 		.wrapper
 			position: absolute
 			top: 0
@@ -538,7 +541,8 @@ header
 	top: 0
 	position: fixed
 	z-index: 100	
-	overflow-y: auto
+	overflow-y: scroll
+	-webkit-overflow-scrolling: touch;
 	+transition(0.2s)
 	+transform(translateX(-280px))
 	transition-delay: 0.2s
