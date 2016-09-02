@@ -1,18 +1,17 @@
 @import compass/css3
 @import mixin
 
-body
-	width: 100%
-	height: 100%
-	position: relative
-	&.active
+html.active
+	body
+		position: fixed
+		overflow-x: hidden
 		.wrapper
 			position: absolute
 			top: 0
 			left: 0
 			width: 100vw
 			height: 100vh
-			+transform(translateX(280px))
+			+transform(translate3d(280px, 0, 0))
 			overflow: hidden
 			#nav-icon
 				z-index: 80
@@ -29,7 +28,12 @@ body
 				z-index: 0
 		.side-menu
 			box-shadow: 2px 0 8px rgba(0,0,0,0.5)
-			+transform(translateX(0%))
+			+transform(translate3d(0, 0, 0))
+body
+	width: 100%
+	height: 100%
+	position: relative
+
 
 
 	&.launcher

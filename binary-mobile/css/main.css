@@ -1,24 +1,23 @@
-body {
-  width: 100%;
-  height: 100%;
-  position: relative;
+html.active body {
+  position: fixed;
+  overflow-x: hidden;
 }
-body.active .wrapper {
+html.active body .wrapper {
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  -moz-transform: translateX(280px);
-  -ms-transform: translateX(280px);
-  -webkit-transform: translateX(280px);
-  transform: translateX(280px);
+  -moz-transform: translate3d(280px, 0, 0);
+  -ms-transform: translate3d(280px, 0, 0);
+  -webkit-transform: translate3d(280px, 0, 0);
+  transform: translate3d(280px, 0, 0);
   overflow: hidden;
 }
-body.active .wrapper #nav-icon {
+html.active body .wrapper #nav-icon {
   z-index: 80;
 }
-body.active .wrapper header:before {
+html.active body .wrapper header:before {
   content: "";
   position: fixed;
   width: 100%;
@@ -28,15 +27,21 @@ body.active .wrapper header:before {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 50;
 }
-body.active .wrapper .second-bar {
+html.active body .wrapper .second-bar {
   z-index: 0;
 }
-body.active .side-menu {
+html.active body .side-menu {
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.5);
-  -moz-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  -webkit-transform: translateX(0%);
-  transform: translateX(0%);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 body.launcher {
   background-image: url("../images/launch-bg.svg");

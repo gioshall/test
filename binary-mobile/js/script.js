@@ -14,15 +14,16 @@ function gotoDetail() {
 // side menu
 $('#nav-icon').click(function(){
 	$(this).toggleClass('open');
-	//$('body').toggleClass('active');	
-	$('body').toggleClass('active').bind('touchmove', function(e) {
-		var hasc = $('body').attr('class');
-		if ( hasc == 'active' ) {
-			//e.preventDefault();
-		} else {
-			return true;
-		}
-	});
+	$('html').toggleClass('active');
+
+	// $('body').toggleClass('active').bind('touchmove', function(e) {
+	// 	var hasc = $('body').attr('class');
+	// 	if ( hasc == 'active' ) {
+	// 		e.preventDefault();
+	// 	} else {
+	// 		return true;
+	// 	}
+	// });
 });
 
 
