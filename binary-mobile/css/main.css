@@ -1,3 +1,7 @@
+html.active {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
 html.active body {
   position: fixed;
   overflow-x: hidden;
