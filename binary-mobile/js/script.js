@@ -18,7 +18,7 @@ $('#nav-icon').click(function(){
 	$('body').toggleClass('active').bind('touchmove', function(e) {
 		var hasc = $('body').attr('class');
 		if ( hasc == 'active' ) {
-			e.preventDefault();
+			//e.preventDefault();
 		} else {
 			return true;
 		}
