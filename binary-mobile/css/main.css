@@ -11,8 +11,8 @@ Error: Invalid CSS after "touch": expected expression (e.g. 1px, bold), was ";"
 8: 	body
 9: 		position: fixed
 10: 		overflow-x: hidden
-11: 		overflow-y: scroll
-12: 		-webkit-overflow-scrolling: touch;
+11: 		.wrapper
+12: 			position: absolute
 
 Backtrace:
 /Users/gioliao/Desktop/gio-works/binary/test/binary-mobile/sass/main.sass:7
@@ -56,4 +56,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"touch\": expected expression (e.g. 1px, bold), was \";\"\A         on line 7 of /Users/gioliao/Desktop/gio-works/binary/test/binary-mobile/sass/main.sass\A \A 2: @import mixin\A 3: \A 4: html.active\A 5: 	overflow-x: hidden\A 6: 	overflow-y: scroll\A 7: 	-webkit-overflow-scrolling: touch;\A 8: 	body\A 9: 		position: fixed\A 10: 		overflow-x: hidden\A 11: 		overflow-y: scroll\A 12: 		-webkit-overflow-scrolling: touch;"; }
+  content: "Error: Invalid CSS after \"touch\": expected expression (e.g. 1px, bold), was \";\"\A         on line 7 of /Users/gioliao/Desktop/gio-works/binary/test/binary-mobile/sass/main.sass\A \A 2: @import mixin\A 3: \A 4: html.active\A 5: 	overflow-x: hidden\A 6: 	overflow-y: scroll\A 7: 	-webkit-overflow-scrolling: touch;\A 8: 	body\A 9: 		position: fixed\A 10: 		overflow-x: hidden\A 11: 		.wrapper\A 12: 			position: absolute"; }
