@@ -341,39 +341,25 @@ header
 			h3
 				font-weight: bold
 		.text-red
-			color: $color-red
+			color: $color-red !important
 			font-weight: bold
 		.text-green
-			color: $color-green
+			color: $color-green !important
 			font-weight: bold
 		.align-right
 			text-align: right !important
+		.table-head-gold
+			background-color: #edc23e !important
+		.table-head-dgray
+			background-color: #5e5e5e !important
+			color: #efefef !important
+		.table-head-white
+			background-color: #fff !important
+			color: $font-color
 		thead
 			.table-head
 				color: #4a4a4a
 				font-weight: bold
-				&.table-head-gold
-					background-color: #edc23e
-				&.table-head-dgray
-					background-color: #5e5e5e
-					color: #efefef
-				&.table-head-white
-					background-color: #fff
-					color: $font-color
-				.btn
-					display: inline-block
-					height: 18px
-					line-height: 18px
-					width: 50px
-					font-size: 12px
-					margin: 0 3px
-					color: #4a4a4a
-					box-shadow: 0 0 0 #000
-					cursor: pointer	
-					+border-radius(3px)
-					&.date
-						background: transparent
-						color: #fff
 				.summary-list
 					li
 						display: inline-block
@@ -382,12 +368,28 @@ header
 						b
 							font-weight: bold
 							color: $darker-color
+				.date
+					color: #fff
 			th
 				border-bottom: 1px solid #bebebe
 				white-space: nowrap
 		tbody
 			th
 				font-weight: bold
+		.btn
+			display: inline-block
+			height: 18px
+			line-height: 18px
+			width: 50px
+			font-size: 12px
+			margin: 0 3px
+			color: #4a4a4a
+			box-shadow: 0 0 0 #000
+			cursor: pointer	
+			+border-radius(3px)
+			&.date
+				background: transparent
+				
 		&.table-announce
 			tr
 				td:nth-of-type(2)
