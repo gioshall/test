@@ -56,6 +56,7 @@ header
 			overflow: hidden
 			display: inline-block
 			background-color: #f8f8f8
+			display: none
 			&:hover
 				height: 180px
 			ul
@@ -78,6 +79,7 @@ header
 			margin: 8px 0
 			height: 32px
 			line-height: 32px
+
 
 .login-form
 	position: absolute
@@ -318,12 +320,17 @@ header
 			display: block
 			margin: auto
 
+.right-frame
+	position: absolute
+	top: 50px
+	left: 250px
+	width: calc(100% - 250px)
+	height: calc(100% - 50px)
+
 .wrapper
 	position: relative
-	top: 50px
-	left: 260px
-	width: calc(100% - 290px)
-	padding: 10px
+	margin: 10px 30px 50px
+
 	h2
 		color: $font-color
 		font-size: 18px
@@ -348,6 +355,8 @@ header
 			font-weight: bold
 		.align-right
 			text-align: right !important
+		.align-center
+			text-align: center !important
 		.table-head-gold
 			background-color: #edc23e !important
 		.table-head-dgray
@@ -513,6 +522,7 @@ header
 			width: 15px
 			height: 15px
 			display: block
+			margin: auto
 			background-size: 100%
 			&.st-open
 				+bg(status-open,svg)

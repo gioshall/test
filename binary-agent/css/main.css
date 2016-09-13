@@ -962,6 +962,7 @@ header .time-lang .lang-list {
   overflow: hidden;
   display: inline-block;
   background-color: #f8f8f8;
+  display: none;
 }
 header .time-lang .lang-list:hover {
   height: 180px;
@@ -1337,12 +1338,17 @@ header .time-lang .btn {
   margin: auto;
 }
 
+.right-frame {
+  position: absolute;
+  top: 50px;
+  left: 250px;
+  width: calc(100% - 250px);
+  height: calc(100% - 50px);
+}
+
 .wrapper {
   position: relative;
-  top: 50px;
-  left: 260px;
-  width: calc(100% - 290px);
-  padding: 10px;
+  margin: 10px 30px 50px;
 }
 .wrapper h2 {
   color: #5e5e5e;
@@ -1374,6 +1380,9 @@ header .time-lang .btn {
 }
 .wrapper table .align-right {
   text-align: right !important;
+}
+.wrapper table .align-center {
+  text-align: center !important;
 }
 .wrapper table .table-head-gold {
   background-color: #edc23e !important;
@@ -1577,6 +1586,7 @@ header .time-lang .btn {
   width: 15px;
   height: 15px;
   display: block;
+  margin: auto;
   background-size: 100%;
 }
 .wrapper table .status.st-open {
