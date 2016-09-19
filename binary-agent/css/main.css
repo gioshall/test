@@ -68,6 +68,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-align: center;
 }
 
+.pure-table tr:hover td {
+  background: #fefce7 !important;
+}
+
 .pure-table td,
 .pure-table th {
   border-left: 1px solid #bebebe;
@@ -1369,6 +1373,9 @@ header .time-lang .btn {
 }
 .wrapper table td h3 {
   font-weight: bold;
+}
+.wrapper table .uid {
+  cursor: pointer;
 }
 .wrapper table .text-red {
   color: #d0021b !important;
