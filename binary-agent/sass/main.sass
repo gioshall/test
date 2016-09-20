@@ -433,8 +433,6 @@ header
 				position: relative
 				border-bottom: 1px solid #bebebe
 
-
-
 		.level
 			font-size: 11px
 			width: 30px
@@ -458,22 +456,27 @@ header
 				&:after
 					border-left: $level-01 solid 8px
 			&.lv-sm
+				margin-left: 10px
 				background-color: $level-02
 				&:after
 					border-left: $level-02 solid 8px
 			&.lv-m
+				margin-left: 20px
 				background-color: $level-03
 				&:after
 					border-left: $level-03 solid 8px
 			&.lv-ma
+				margin-left: 30px
 				background-color: $level-04
 				&:after
 					border-left: $level-04 solid 8px
 			&.lv-a
+				margin-left: 40px
 				background-color: $level-05
 				&:after
 					border-left: $level-05 solid 8px
 			&.lv-pl
+				margin-left: 50px
 				background-color: $level-06
 				&:after
 					border-left: $level-06 solid 8px	
@@ -544,6 +547,7 @@ header
 	height: 18px
 	display: inline-block
 	background-size: 100%
+	text-align: center
 	cursor: pointer
 	&.hk-info
 		+bg(icon-info,png)
@@ -553,6 +557,34 @@ header
 		+bg(icon-receipt,png)	
 	&.hk-trans
 		+bg(icon-trans,png)
+	&.hk-report
+		+bg(icon-report,svg)
+	&.hk-history
+		+bg(icon-history,png)
+	&:hover .tool-tip
+		display: block
+
+	.tool-tip
+		position: absolute
+		padding: 5px
+		font-size: 11px
+		background-color: #333
+		margin-top: -30px
+		margin-left: 8px
+		color: #fff
+		display: none
+		+border-radius(2px)
+		+transform(translateX(-50%))
+		&:after
+			content: ''
+			position: absolute
+			border: 4px #333 solid
+			bottom: -8px
+			left: 50%
+			margin-left: -4px
+			border-left-color: transparent
+			border-right-color: transparent
+			border-bottom-color: transparent
 
 .round-button
 	display: inline-block

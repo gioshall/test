@@ -1506,30 +1506,35 @@ header .time-lang .btn {
   border-left: #FB7E7F solid 8px;
 }
 .wrapper table .level.lv-sm {
+  margin-left: 10px;
   background-color: #FDA964;
 }
 .wrapper table .level.lv-sm:after {
   border-left: #FDA964 solid 8px;
 }
 .wrapper table .level.lv-m {
+  margin-left: 20px;
   background-color: #3AC58F;
 }
 .wrapper table .level.lv-m:after {
   border-left: #3AC58F solid 8px;
 }
 .wrapper table .level.lv-ma {
+  margin-left: 30px;
   background-color: #1B64FB;
 }
 .wrapper table .level.lv-ma:after {
   border-left: #1B64FB solid 8px;
 }
 .wrapper table .level.lv-a {
+  margin-left: 40px;
   background-color: #7783A7;
 }
 .wrapper table .level.lv-a:after {
   border-left: #7783A7 solid 8px;
 }
 .wrapper table .level.lv-pl {
+  margin-left: 50px;
   background-color: #9F85BE;
 }
 .wrapper table .level.lv-pl:after {
@@ -1621,6 +1626,7 @@ header .time-lang .btn {
   height: 18px;
   display: inline-block;
   background-size: 100%;
+  text-align: center;
   cursor: pointer;
 }
 .hotkey.hk-info {
@@ -1638,6 +1644,45 @@ header .time-lang .btn {
 .hotkey.hk-trans {
   background-image: url("../images/icon-trans.png");
   background-repeat: no-repeat;
+}
+.hotkey.hk-report {
+  background-image: url("../images/icon-report.svg");
+  background-repeat: no-repeat;
+}
+.hotkey.hk-history {
+  background-image: url("../images/icon-history.png");
+  background-repeat: no-repeat;
+}
+.hotkey:hover .tool-tip {
+  display: block;
+}
+.hotkey .tool-tip {
+  position: absolute;
+  padding: 5px;
+  font-size: 11px;
+  background-color: #333;
+  margin-top: -30px;
+  margin-left: 8px;
+  color: #fff;
+  display: none;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.hotkey .tool-tip:after {
+  content: "";
+  position: absolute;
+  border: 4px #333 solid;
+  bottom: -8px;
+  left: 50%;
+  margin-left: -4px;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
 }
 
 .round-button {
