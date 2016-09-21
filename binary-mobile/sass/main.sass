@@ -1071,6 +1071,10 @@ footer
 		background: #c8a43f
 		border: solid 1px #c8a43f
 		outline: none
+	&.round
+		background-color: #FFF
+		color: #d8a301
+		+linear-gradient(#fff,#fff)
 
 
 .switch
@@ -1145,7 +1149,7 @@ input
 	li
 		display: inline-block
 		height: 45px
-		width: calc(100% / 3)
+		width: calc(100% / 4)
 		background-color: #e9e9e9
 		margin: 0
 		padding: 0
@@ -1158,6 +1162,9 @@ input
 			+bg(icon-waiting,svg)
 		&.completed
 			+bg(icon-completed,svg)
+		&.list
+			+bg(icon-list,png)
+
 		&.active
 			background-color: #edc23e
 			&.transfer
@@ -1166,6 +1173,8 @@ input
 				+bg(icon-waiting-on,svg)
 			&.completed
 				+bg(icon-completed-on,svg)
+			&.list
+				+bg(icon-list-on,png)
 .transaction
 	position: absolute
 	width: 100%
@@ -1190,7 +1199,7 @@ input
 			padding-left: 6px
 	.sub-title
 		text-indent: 15px
-		line-height: 30px
+		line-height: 35px
 		color: #5e5e5e
 		font-size: 13px
 		background-color: #e9e9e9
@@ -1200,11 +1209,28 @@ input
 		//top: 0
 		width: 100%
 		z-index: 1
+		.btn-group
+			position: absolute
+			text-align: right
+			top: 0
+			width: 100%
+		.btn
+			display: inline-block
+			width: auto
+			min-width: 20px
+			text-indent: 0
+			vertical-align: middle
+			margin: 0 2px
+			padding: 0 5px
+			line-height: 22px
+			font-size: 11px
 	.main-wrap
 		position: relative
 		display: none
 		&.show
 			display: block
+		.list-content:nth-of-type(2)
+			margin-top: 30px
 	.table-wrap
 		background-color: #f8f8f8
 		overflow-y: scroll
@@ -1214,7 +1240,7 @@ input
 		box-sizing: border-box
 		height: 35px
 		overflow: hidden
-		+border-radius(17.5px)
+		+border-radius(5px)
 		ul
 			margin: 0
 			padding: 0
@@ -1244,32 +1270,34 @@ input
 		bottom: 0
 		left: 15px
 		position: fixed
-		min-height: 220px
+		min-height: 280px
 		.set-btn
 			margin: 3px auto 12px
-			height: 55px
+			height: 110px
 			display: block
 
 			.set-panel
-				float: left
-				&:last-child
-					float: right
+				padding-top: 5px
+				// float: left
+				// &:last-child
+				// 	float: right
 				h3
 					font-size: 11px
-					color: #9b9b9b	
-					line-height: 20px
+					color: #9b9b9b
+					padding-top: 3px
+					line-height: 17px
 					margin: 0	
 				.option
-					height: 35px
-					line-height: 35px
+					height: 32px
+					line-height: 32px
 					position: relative
 					font-size: 17px
 					box-sizing: border-box
 					color: #d8a301
-					width: 150px
-					border: solid 1px #9b9b9b
+					width: 100%
+					//border: solid 1px #9b9b9b
 					left: 0
-					+border-radius(17.5px)
+					//+border-radius(17.5px)
 					select
 						font-size: 17px
 						color: #d8a301
@@ -1278,27 +1306,47 @@ input
 						-webkit-appearance: none
 						&:focus
 							outline: none
+					.btn-group
+						width: calc(100% - 70px)
+						position: relative
+						text-align: center
+						margin: auto
+						height: 32px
+						.btn
+							display: inline-block
+							width: 25%
+							height: 30px
+							line-height: 30px
+							margin: 0 2%
+
 					.rbtn
-						width: 30px
-						height: 30px
 						line-height: 28px
 						box-sizing: border-box
-						top: 1.5px
-						border: solid 1px #d8a301
+						top: 0
+						border: solid 1px #edc23e
 						position: absolute
 						cursor: pointer
-						+border-radius(50%)
+						+border-radius(5px)
+						&.reduce,
+						&.add
+							width: 32px
+							height: 32px
+							font-size: 24px
 						&.reduce
 							left: 1.5px
 						&.add
 							right: 1.5px
+						&.disabled
+							color: #bebebe
+							background-color: #e9e9e9
+							border: solid 1px #bebebe
 					@media screen and (max-width: 320px)
 						width: 120px
 
 		.bid-btn
 			width: 100%
 			position: relative
-			clear: both
+			//clear: both
 			display: none
 			&.show
 				display: block
@@ -1335,14 +1383,20 @@ input
 				position: relative
 				display: inline-block
 				margin: auto
-				width: auto
+				width: calc(100% - 250px)
 				height: 50px
-				line-height: 50px
+				line-height: 28px
 				margin: 5px
-				padding: 0 18px
-				border:  solid 2px #9b9b9b
+				padding: 0
+				//border:  solid 2px #9b9b9b
 				color: #9b9b9b
-				+border-radius(4px)
+				//+border-radius(4px)
+				.percent
+					color: #9b9b9b
+					font-size: 15px
+					line-height: 22px
+					font-weight: normal
+					border-top: 1px #9b9b9b dotted 
 				span
 					font-size: 20px
 					font-weight: bold

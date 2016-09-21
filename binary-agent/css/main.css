@@ -1096,6 +1096,9 @@ header .time-lang .btn {
   font-size: 13px;
   line-height: 30px;
 }
+.menu-list ul li .content ul li {
+  cursor: pointer;
+}
 .menu-list ul label {
   background-size: 25px 25px;
   background-position: 8px center;
@@ -1373,6 +1376,12 @@ header .time-lang .btn {
 }
 .wrapper table td h3 {
   font-weight: bold;
+}
+.wrapper table .td-uid {
+  white-space: nowrap;
+}
+.wrapper table .td-uid.distree .level {
+  margin-left: 0 !important;
 }
 .wrapper table .uid {
   cursor: pointer;
@@ -1665,6 +1674,7 @@ header .time-lang .btn {
   margin-left: 8px;
   color: #fff;
   display: none;
+  white-space: nowrap;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;

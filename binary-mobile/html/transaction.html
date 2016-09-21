@@ -20,15 +20,22 @@
     <!-- <div class="refresh" onClick="window.location.reload()"></div> -->
   </header>
   <section class="transaction">
-    <div class="subject">
+    <!-- <div class="subject">
       美金/日圓
       <span>95%</span>
-    </div>
+    </div> -->
 
     <!-- chart -->
     <div class="main-wrap chart-wrap transfer show">
       <div class="sub-title">
         图表
+
+        <div class="btn-group">
+          <div class="btn">1M</div>
+          <div class="btn round">5M</div>
+          <div class="btn round">10M</div>
+          <div class="btn round">15M</div>
+        </div>        
       </div>
       
     </div>
@@ -307,8 +314,101 @@
           </div>
         </div>
       </div>
+    </div>
 
+    <!-- table list -->
+    <div class="main-wrap table-wrap list">
+      <div class="sub-title">
+        下单记录
+        <div class="btn-group">
+          <div class="btn">我的最爱</div>
+          <div class="btn round">指数</div>
+          <div class="btn round">商品</div>
+        </div>      
+      </div>
+         <div class="list-content">
+      <div class="list-item"><span class="icon-sopen"></span> 美金/日圆 
+        
+        <input type="checkbox" id="fav01" class="fa favcheck">
+        <label for="fav01">
+          <i class="fa fa-star-o" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+        </label>
+      </div>
+      <div class="list-item">
+        <div class="list-chart"></div>
+      </div>
+      <div class="list-item"><span class="price-call">107.109</span></div>
+    </div>
 
+    <div class="list-content">
+      <div class="list-item"><span class="icon-sclose"></span> 美金/日圆
+      <input type="checkbox" id="fav02" class="fa favcheck">
+        <label for="fav02">
+          <i class="fa fa-star-o" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+        </label>
+      </div>
+      <div class="list-item">
+        <div class="list-chart"></div>
+      </div>
+      <div class="list-item"><span class="price-put">1.31187</span></div>
+    </div>
+
+    <div class="list-content">
+      <div class="list-item"><span class="icon-sopen"></span> 美金/日圆
+      <input type="checkbox" id="fav03" class="fa favcheck">
+        <label for="fav03">
+          <i class="fa fa-star-o" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+        </label>
+      </div>
+      <div class="list-item">
+        <div class="list-chart"></div>
+      </div>
+      <div class="list-item"><span class="price-call">107.109</span></div>
+    </div>
+    <div class="list-content">
+      <div class="list-item"><span class="icon-sopen"></span> 美金/日圆
+      <input type="checkbox" id="fav04" class="fa favcheck">
+        <label for="fav04">
+          <i class="fa fa-star-o" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+        </label>
+      </div>
+      <div class="list-item">
+        <div class="list-chart"></div>
+      </div>
+      <div class="list-item"><span class="price-call">107.109</span></div>
+    </div>
+
+    <div class="list-content">
+      <div class="list-item"><span class="icon-sclose"></span> 美金/日圆
+      <input type="checkbox" id="fav05" class="fa favcheck">
+        <label for="fav05">
+          <i class="fa fa-star-o" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+        </label>
+      </div>
+      <div class="list-item">
+        <div class="list-chart"></div>
+      </div>
+      <div class="list-item"><span class="price-put">1.31187</span></div>
+    </div>
+
+    <div class="list-content">
+      <div class="list-item"><span class="icon-sopen"></span> 美金/日圆
+      <input type="checkbox" id="fav06" class="fa favcheck">
+        <label for="fav06">
+          <i class="fa fa-star-o" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+        </label>
+      </div>
+      <div class="list-item">
+        <div class="list-chart"></div>
+      </div>
+      <div class="list-item"><span class="price-call">107.109</span></div>
+    </div>
     </div>
 
     <div class="bid-area">
@@ -323,25 +423,42 @@
         <div class="set-panel">
           <h3>投资金额</h3>
           <div class="option">
-            <select id="pppMoney"><option value="1">1</option><option value="2">2</option><option value="5">5</option><option value="10">10</option><option value="20">20</option><option value="50">50</option><option value="100">100</option><option value="200">200</option><option value="500">500</option><option value="1000">1000</option><option value="2000">2000</option><option value="5000">5000</option></select>
+            <!-- <select id="pppMoney"><option value="1">1</option><option value="2">2</option><option value="5">5</option><option value="10">10</option><option value="20">20</option><option value="50">50</option><option value="100">100</option><option value="200">200</option><option value="500">500</option><option value="1000">1000</option><option value="2000">2000</option><option value="5000">5000</option></select> -->
+            
+            <div class="btn-group">
+              <div class="btn round">1000</div>
+              <div class="btn">2000</div>
+              <div class="btn round">5000</div>
+            </div>
+
             <div class="rbtn reduce">-</div>
-            <div class="rbtn add">+</div>
+            <div class="rbtn add disabled">+</div>
           </div>
         </div>
         <div class="set-panel">
           <h3>到期时间</h3>
           <div class="option">
-            <select id="periodSelector" onchange="changeRate()"><option value="30">30秒
+            <!-- <select id="periodSelector" onchange="changeRate()"><option value="30">30秒
                     </option><option value="60">1分
                     </option><option value="120">2分
-                    </option></select>
-            <div class="rbtn reduce">-</div>
-            <div class="rbtn add">+</div>
+                    </option></select> -->
+            <div class="btn-group">
+              <div class="btn round">30秒</div>
+              <div class="btn">1分</div>
+              <div class="btn round">2分</div>
+            </div>
+            <!-- <div class="rbtn reduce">-</div>
+            <div class="rbtn add">+</div> -->
           </div>
         </div>
       </div>
       <div class="bid-btn" id="call-put">
-        <div class="index">107.<span>109</span></div>
+        <div class="index">
+          107.<span>109</span>
+          <div class="percent">
+            95%
+          </div>
+        </div>
         <div class="lbtn" comfirmOvl="bid-call">
           <i>▲</i>
           涨
@@ -352,7 +469,12 @@
         </div>
       </div>
       <div class="bid-btn show" id="odd-even">
-        <div class="index">107.<span>109</span></div>
+        <div class="index">
+          107.<span>109</span>
+          <div class="percent">
+            95%
+          </div>
+        </div>
         <div class="lbtn" comfirmOvl="bid-odd">
           <i>1 3 5 7 9</i>
           单
@@ -363,7 +485,12 @@
         </div>
       </div>
       <div class="bid-btn" id="big-small">
-        <div class="index">107.<span>109</span></div>
+        <div class="index">
+          107.<span>109</span>
+          <div class="percent">
+            95%
+          </div>
+        </div>
         <div class="lbtn" comfirmOvl="bid-big">
           <i>5 6 7 8 9</i>
           大
@@ -378,6 +505,7 @@
       <li class="transfer active" onclick="navSwitch('transfer')"></li>
       <li class="waiting" onclick="navSwitch('waiting')"></li>
       <li class="completed" onclick="navSwitch('completed')"></li>
+      <li class="list" onclick="navSwitch('list')"></li>
     </ul>
   </section>
   <div id="bid-overlay">
