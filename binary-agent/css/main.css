@@ -1903,3 +1903,74 @@ input:checked + .slider:before {
   color: #5e5e5e;
   margin-top: 50px;
 }
+
+.fixed-table {
+  min-width: 1260px !important;
+}
+.fixed-table thead {
+  display: table;
+  width: 100%;
+}
+.fixed-table tbody {
+  display: block;
+  overflow-y: auto;
+  height: 85vh;
+  width: 100%;
+}
+.fixed-table tbody tr {
+  display: table;
+  width: 100%;
+}
+.fixed-table td,
+.fixed-table th {
+  padding: 0.7em 5px;
+}
+.fixed-table td:nth-of-type(2),
+.fixed-table th:nth-of-type(2) {
+  width: 120px;
+}
+.fixed-table td:nth-of-type(3),
+.fixed-table th:nth-of-type(3) {
+  width: 80px;
+}
+.fixed-table td:nth-of-type(4),
+.fixed-table th:nth-of-type(4) {
+  width: 50px;
+}
+.fixed-table td:nth-of-type(5),
+.fixed-table th:nth-of-type(5) {
+  width: 25px;
+}
+.fixed-table td:nth-of-type(6),
+.fixed-table th:nth-of-type(6) {
+  width: 130px;
+}
+.fixed-table td:nth-of-type(7),
+.fixed-table th:nth-of-type(7) {
+  width: 130px;
+}
+.fixed-table td:nth-of-type(8),
+.fixed-table th:nth-of-type(8) {
+  width: 130px;
+}
+.fixed-table td:nth-of-type(9),
+.fixed-table th:nth-of-type(9) {
+  width: 90px;
+}
+.fixed-table td:nth-of-type(10),
+.fixed-table th:nth-of-type(10) {
+  width: 90px;
+}
+.fixed-table td:nth-of-type(11),
+.fixed-table th:nth-of-type(11) {
+  width: 120px;
+}
+.fixed-table .sum td:nth-of-type(2), .fixed-table .sum td:nth-of-type(3), .fixed-table .sum td:nth-of-type(4) {
+  width: 130px;
+}
+.fixed-table .sum td:nth-of-type(5), .fixed-table .sum td:nth-of-type(6) {
+  width: 90px;
+}
+.fixed-table .sum td:nth-of-type(7) {
+  width: 120px;
+}
